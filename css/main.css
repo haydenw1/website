@@ -1,0 +1,60 @@
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  width: 100%; }
+
+.container {
+  margin: 0 auto;
+  width: 975px; }
+
+.nav {
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-size: 0;
+  margin: 0 auto;
+  padding: 15px;
+  width: 1025px; }
+  .nav p {
+    color: black;
+    text-align: center;
+    pointer-events: none; }
+
+.section .description {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1.10em;
+  text-indent: 2em; }
+
+.head {
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-size: 24px; }
+
+.title {
+  border-bottom: 1.5px solid black;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: left;
+  text-indent: .25em; }
+
+.link {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 300;
+  margin: 0px 2.5%;
+  padding: 10px 0px;
+  text-align: center;
+  width: 15%; }
+  .link:hover {
+    border-bottom: 1px solid black;
+    padding: 9px 0px; }
+
+/*# sourceMappingURL=main.css.map */

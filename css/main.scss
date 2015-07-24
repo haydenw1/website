@@ -1,0 +1,73 @@
+$font-comfortaa: 'Comfortaa', Arial, sans-serif;
+$font-roboto: 'Roboto', Arial, sans-serif;
+
+@import 'reset';
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+}
+
+.container {
+  margin: 0 auto;
+  width: 975px;
+}
+
+.nav {
+  font-family: $font-comfortaa;
+  font-size: 0; //to fix inline-block space problems of children
+  margin: 0 auto;
+  padding: 15px;
+  width: 1025px;
+
+  p {
+    color: black;
+    text-align: center;
+    pointer-events: none;
+  }
+}
+
+.section{
+  .description{
+    font-family: $font-roboto;
+    font-size: 1.10em;
+    text-indent: 2em;
+  }
+}
+
+.head {
+  font-family: $font-comfortaa;
+  font-size: 24px;
+}
+
+.title {
+  border-bottom: 1.5px solid black;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: left;
+  text-indent: .25em;
+}
+
+.link {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 300;
+  margin: 0px 2.5%;
+  padding: 10px 0px;
+  //box-shadow: 0px 6px 7px -9px rgba(0,0,0,.3);
+  text-align: center;
+  width: 15%;
+
+  &:hover {
+    border-bottom: 1px solid black;
+    padding: 9px 0px;
+  }
+}
