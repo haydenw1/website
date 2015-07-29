@@ -41,7 +41,8 @@ html, body {
   height: 50px;
   position: fixed;
   left: 250px;
-  width: 975px; }
+  width: 975px;
+  z-index: 1; }
   .nav .link {
     cursor: pointer;
     display: inline-block;
@@ -51,9 +52,8 @@ html, body {
     padding: 10px 0px;
     text-align: center; }
     .nav .link:hover {
-      padding: 9px 0px;
-      font-weight: 400;
-      color: #42EDFF;
+      font-weight: 300;
+      color: #027d8a;
       text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.2); }
 
 .section {
