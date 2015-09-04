@@ -1,9 +1,16 @@
 $font-comfortaa: 'Comfortaa', Arial, sans-serif;
+$font-lora: 'Lora', serif;
+$font-raleway: 'Raleway', sans-serif;
 $font-roboto: 'Roboto', Arial, sans-serif;
+
+
 
 @import 'reset';
 @import url(http://fonts.googleapis.com/css?family=Comfortaa:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto);
+
 
 html,body{
   height: 100%;
@@ -17,13 +24,18 @@ body {
 
 .container {
   height: 100%;
-  margin: 0px 0px 0px 250px;
+  font-size: 1.15em;
+  //margin: 0px 0px 0px 250px;
+  left: calc(75% - 900px);
+    position: absolute;
   padding: 50px 0px 0px 0px;
-  width: 975px;
+  width: 900px;
+  font-family: $font-raleway; //for right now
 }
 
 .head {
-  font-family: $font-comfortaa;
+  //font-family: $font-comfortaa;
+
   font-size: 24px;
   opacity: .75;
 }
@@ -40,27 +52,33 @@ body {
 
   &.left{
     box-shadow: -3px -3px 6px 0px rgba(0, 0, 0, 0.2);
-    height: 100%;
+    height: calc(100% + 5%);
   }
 
 }
 
 .nav {
   background: #fff;
-  font-family: $font-comfortaa;
+  //font-family: $font-raleway;
+  //font-weight: 700;
+  //font-family: $font-comfortaa;
   font-size: 0; //to fix inline-block space problems of children
   height: 50px;
   position: fixed;
-  left: 250px;
-  width: 975px;
+  border-bottom: 2px solid;
+      left: calc(75% - 900px);
+  width: 900px;
+
   z-index: 1;
   //padding: 15px 0px;
   //width: 975px;
 
-    .link {
+  .link {
     cursor: pointer;
     display: inline-block;
-    font-weight: 400;
+    //font-weight: 400;
+    font-family: $font-raleway;
+    //font-weight: 700;
     margin: 0px 2.5%;
     opacity: .75;
     padding: 10px 0px;
@@ -70,23 +88,35 @@ body {
 
     &:hover {
       //padding: 9px 0px;
-      font-weight: 300;
+      //font-weight: 300;
       color: rgb(2, 125, 138);
-      text-shadow: .5px .5px 1px rgba(0, 0, 0, 0.2);
+      //text-shadow: .5px .5px 1px rgba(0, 0, 0, 0.2);
     }
+  //on scroll js
+  //box-shadow: 0px 5px 3px -3px rgba(0,0,0,.5);
+  }
 
-
-    //on scroll js
-    //box-shadow: 0px 5px 3px -3px rgba(0,0,0,.5);
-
+  .special {
+    font-weight: 700;
+    padding: 0px;
+    bottom: 10px;
+    position: absolute;
+    right: 0px;
   }
 }
 
-.section{
+.section {
   float: right;
-  width: 93%;
+  width: 87%;
+  padding: 0% 3%;
+  margin: 15px 0px 0px 0px;
+  border: 1px solid gray;
 
-  .description{
+  &:hover{
+    background-color: gainsboro;
+  }
+
+  .description {
     font-family: $font-roboto;
     font-size: 1.10em;
     text-indent: 2em;
@@ -95,8 +125,11 @@ body {
 
 .title {
   border-bottom: 1.5px solid gainsboro;
-  font-weight: 300;
-  margin-bottom: 10px;
+  //font-weight: 300;
+  font-family: $font-raleway;
+  font-weight: 700;
+  margin: 15px 0px 0px -5px;
+  //margin-bottom: 10px;
   text-align: left;
   text-indent: .25em;
 }

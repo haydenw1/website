@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Comfortaa:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 html,
 body,
@@ -14,12 +16,14 @@ html, body {
 
 .container {
   height: 100%;
-  margin: 0px 0px 0px 250px;
+  font-size: 1.15em;
+  left: calc(75% - 900px);
+  position: absolute;
   padding: 50px 0px 0px 0px;
-  width: 975px; }
+  width: 900px;
+  font-family: "Raleway", sans-serif; }
 
 .head {
-  font-family: "Comfortaa", Arial, sans-serif;
   font-size: 24px;
   opacity: .75; }
 
@@ -32,33 +36,42 @@ html, body {
     height: 100px; }
   .bar.left {
     box-shadow: -3px -3px 6px 0px rgba(0, 0, 0, 0.2);
-    height: 100%; }
+    height: calc(100% + 5%); }
 
 .nav {
   background: #fff;
-  font-family: "Comfortaa", Arial, sans-serif;
   font-size: 0;
   height: 50px;
   position: fixed;
-  left: 250px;
-  width: 975px;
+  border-bottom: 2px solid;
+  left: calc(75% - 900px);
+  width: 900px;
   z-index: 1; }
   .nav .link {
     cursor: pointer;
     display: inline-block;
-    font-weight: 400;
+    font-family: "Raleway", sans-serif;
     margin: 0px 2.5%;
     opacity: .75;
     padding: 10px 0px;
     text-align: center; }
     .nav .link:hover {
-      font-weight: 300;
-      color: #027d8a;
-      text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.2); }
+      color: #027d8a; }
+  .nav .special {
+    font-weight: 700;
+    padding: 0px;
+    bottom: 10px;
+    position: absolute;
+    right: 0px; }
 
 .section {
   float: right;
-  width: 93%; }
+  width: 87%;
+  padding: 0% 3%;
+  margin: 15px 0px 0px 0px;
+  border: 1px solid gray; }
+  .section:hover {
+    background-color: gainsboro; }
   .section .description {
     font-family: "Roboto", Arial, sans-serif;
     font-size: 1.10em;
@@ -66,8 +79,9 @@ html, body {
 
 .title {
   border-bottom: 1.5px solid gainsboro;
-  font-weight: 300;
-  margin-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  margin: 15px 0px 0px -5px;
   text-align: left;
   text-indent: .25em; }
 
