@@ -1,0 +1,97 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300);
+body,
+html {
+  height: 100%;
+  margin: 0px;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%; }
+
+.slider {
+  background-color: gray;
+  height: 400px;
+  position: relative;
+  width: 100%; }
+
+.s-holder {
+  background-color: darkseagreen;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; }
+  .s-holder .content {
+    overflow: hidden; }
+    .s-holder .content .slider-image {
+      width: 100%; }
+    .s-holder .content .slider-desc {
+      color: white;
+      bottom: 0;
+      font-family: "Roboto", Arial, sans-serif;
+      font-weight: 300;
+      padding: 5% 16%;
+      position: absolute;
+      width: 68%;
+      margin: 0; }
+    .s-holder .content .slider-desc-shadow {
+      bottom: 0;
+      box-shadow: inset 0px -125px 70px -50px;
+      height: 50%;
+      margin: 0;
+      opacity: .75;
+      position: absolute;
+      width: 100%; }
+    .s-holder .content .slider-title {
+      color: white;
+      top: 0;
+      font-family: "Roboto", Arial, sans-serif;
+      height: 10%;
+      padding: 2% 16%;
+      position: absolute;
+      width: 68%;
+      margin: 0; }
+    .s-holder .content .slider-title-shadow {
+      box-shadow: inset 0px 100px 100px -60px;
+      height: 30%;
+      opacity: .75;
+      position: absolute;
+      top: 0;
+      width: 100%; }
+
+.s-nav {
+  height: 100%;
+  width: 15%;
+  cursor: pointer; }
+  .s-nav:hover {
+    background-color: rgba(4, 216, 238, 0.75); }
+  .s-nav:active {
+    background-color: rgba(4, 216, 238, 0.85); }
+  .s-nav img {
+    opacity: .75;
+    position: absolute;
+    top: calc(50% - 18px);
+    transition: left .15s, top .15s, width .15s;
+    width: 26.66%; }
+  .s-nav.left {
+    position: absolute;
+    left: 0;
+    z-index: 1; }
+    .s-nav.left img {
+      left: 25%;
+      transform: rotate(180deg); }
+  .s-nav.right {
+    position: absolute;
+    right: 0;
+    z-index: 1; }
+    .s-nav.right img {
+      right: 25%; }
+
+.no-select {
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; }
+
+/*# sourceMappingURL=main.css.map */

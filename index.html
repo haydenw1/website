@@ -4,10 +4,20 @@
 		<meta charset="utf-8">
 		<title>Hayden Port</title>
 		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="test_slider/css/main.css"/>
 
-		<script type="text/javascript">
+		<script type="text/javascript" src="test_slider/slider.js"></script>
+
+    <script type="text/javascript">
+
+      $( document ).ready(function(){
+        var testSlider = new Slider("test");
+      });
+
 		</script>
 
 	</head>
@@ -28,27 +38,27 @@
 				<div class="bar left"></div>
 				<div class="section">
 					<p class="head title">About</p>
-					<p>Name: Hayden Wagner</p>
-					<p>College: Rochester Institute of Technology</p>
-					<p>Major: Media Arts and Technology (BS)
-					<p>Year: 4th</p>
+					<p class="text left-of-button">Hi, my name is Hayden Wagner. I'm a fourth year Media Arts and Technology (BS) Major at the Rochester Institute of Technology.</p>
+					<p class="button full">More About Me &#187;</p>
 				</div>
 				<div class="section">
 					<p class="head title">Portfolio</p><!--maybe portfolio??? maybe not-->
-					<p>In the portfolio section you can view my completed class, work, or organization <!-- have 'organization' be a link or say 'silver wings' and have it be a link...class and work people will understand but this could be confusing (link could go to about page section that explains silver wings involvement)-->projects.</p>
-					<p>View a preview and short summary of projects in the slider below</p>
-					<p>View full project writeups in the portfolio section by following the link 'here' or with the top menu; click a project in the slider to view the full project in the portfolio section.</p>
+					<p class="text left-of-button">In the portfolio section you can view my completed class, work, or organization <!-- have 'organization' be a link or say 'silver wings' and have it be a link...class and work people will understand but this could be confusing (link could go to about page section that explains silver wings involvement)-->projects.</p>
+					<p class="button full">Full Portolio &#187;</p>
+					<p class="text preview">Portfolio Preview <span class="arrow-adjust">&#8628;</span></p>
+          <div id="test"></div>
+          <p class="button full">Full Portolio &#187;</p>
 				</div>
 				<div class="section">
 					<p class="head title">Ideas</p>
-					<p>In the ideas section you can view any independent projects or ideas that I am working on outside of work or school</p>
-					<p>View a preview and short summary of my ideas in the slider below</p>
-					<p>View full idea writeups in the idea section by following the link 'here' or with the top menu; click an idea in the slider to view the full idea in the ideas section.</p>
+					<p class="text">In the ideas section you can view any independent projects or ideas that I am working on outside of work or school</p>
+					<p class="text">View a preview and short summary of my ideas in the slider below</p>
+					<p class="text">View full idea writeups in the idea section by following the link 'here' or with the top menu; click an idea in the slider to view the full idea in the ideas section.</p>
 				</div>
 				<div class="section">
 					<p class="head title">Contact</p>
-					<p>Email: hbw6955@rit.edu</p>
-					<p>Phone: (607) 342 - 4017</p>
+					<!--<p class="text">Email: hbw6955@rit.edu</p>
+					<p class="text">Phone: (607) 342 - 4017</p>-->
 				</div>
 		</div>
 		<!--%%%%%%%%%%%%%%%%%%%%%%%%   MEAT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
