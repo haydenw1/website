@@ -5,8 +5,8 @@ $font-roboto: 'Roboto', Arial, sans-serif;
 
 
 
-@import 'reset';
-@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,300,700);
+@import '../sass_base_includes/reset';
+//@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Lora:400,400italic);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto);
@@ -26,10 +26,10 @@ body {
   height: 100%;
   font-size: 1.15em;
   //margin: 0px 0px 0px 250px;
-  left: calc(75% - 900px);
+  left: calc(75% - 960px);
     position: absolute;
   padding: 50px 0px 0px 0px;
-  width: 900px;
+  width: 960px;
   font-family: $font-raleway; //for right now
 }
 
@@ -40,23 +40,23 @@ body {
   opacity: .75;
 }
 
-.bar{
+.bar {
   background-image: url("../pent2.jpg");
   float: left;
   margin-top: -50px;
   width: 5%;
 
-  &.top{
+  &.top {
     height: 100px;
   }
 
-  &.left{
+  &.left {
     box-shadow: -3px -3px 6px 0px rgba(0, 0, 0, 0.2);
     height: calc(100% + 5%);
   }
 }
 
-.button{
+.button {
   //background-color: #04D8EE;
   background-image: -webkit-linear-gradient(top, #04D8EE, #00B0C2);
   color: white;
@@ -68,6 +68,12 @@ body {
   float: right;
   font-weight: 400;
   margin-bottom: 9px;
+  cursor: pointer;
+
+  &:hover {
+        background: #2C3536;
+    background-image: -webkit-linear-gradient(top, #90B0B4, #2C3536);
+  }
 
 
 }
@@ -81,8 +87,8 @@ body {
   height: 50px;
   position: fixed;
   //border-bottom: 2px solid;
-  left: calc(75% - 900px);
-  width: 900px;
+  left: calc(75% - 960px);
+  width: 960px;
 
   z-index: 2;
   //padding: 15px 0px;
@@ -140,12 +146,12 @@ body {
   }
 
   .left-of-button {
-    width: 50%;
+    width: 65%;
     float: left;
     padding-left: 10px;
   }
 
-  .preview {
+  .blurb {
     float: right;
     clear: right;
         margin-bottom: 0px;
@@ -154,6 +160,7 @@ body {
     font-weight: 300;
     font-style: italic;
     opacity: .5;
+
 
     .arrow-adjust {
       top: 8px;
@@ -180,3 +187,24 @@ body {
 
 
 
+span.light {
+  font-weight: 400;
+}
+
+
+.preview {
+      left: 77%;
+    top: 50px;
+  position: fixed;
+  width: 500px;
+  height: 100%;
+  opacity: .5;
+}
+
+
+p {
+  font-family: $font-roboto;
+  font-size: 1.10em;
+  font-weight: 300;
+  line-height: 1.45;
+}

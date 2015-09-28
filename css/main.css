@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Lora:400,400italic);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto);
@@ -17,10 +16,10 @@ html, body {
 .container {
   height: 100%;
   font-size: 1.15em;
-  left: calc(75% - 900px);
+  left: calc(75% - 960px);
   position: absolute;
   padding: 50px 0px 0px 0px;
-  width: 900px;
+  width: 960px;
   font-family: "Raleway", sans-serif; }
 
 .head {
@@ -46,15 +45,19 @@ html, body {
   font-size: 1.1em;
   float: right;
   font-weight: 400;
-  margin-bottom: 9px; }
+  margin-bottom: 9px;
+  cursor: pointer; }
+  .button:hover {
+    background: #2C3536;
+    background-image: -webkit-linear-gradient(top, #90B0B4, #2C3536); }
 
 .nav {
   background: #fff;
   font-size: 0;
   height: 50px;
   position: fixed;
-  left: calc(75% - 900px);
-  width: 900px;
+  left: calc(75% - 960px);
+  width: 960px;
   z-index: 2; }
   .nav .link {
     cursor: pointer;
@@ -84,10 +87,10 @@ html, body {
     font-weight: 300;
     line-height: 1.45; }
   .section .left-of-button {
-    width: 50%;
+    width: 65%;
     float: left;
     padding-left: 10px; }
-  .section .preview {
+  .section .blurb {
     float: right;
     clear: right;
     margin-bottom: 0px;
@@ -96,7 +99,7 @@ html, body {
     font-weight: 300;
     font-style: italic;
     opacity: .5; }
-    .section .preview .arrow-adjust {
+    .section .blurb .arrow-adjust {
       top: 8px;
       right: 8px;
       position: relative; }
@@ -111,5 +114,22 @@ html, body {
   margin: 15px 0px 0px -5px;
   text-align: left;
   text-indent: .25em; }
+
+span.light {
+  font-weight: 400; }
+
+.preview {
+  left: 77%;
+  top: 50px;
+  position: fixed;
+  width: 500px;
+  height: 100%;
+  opacity: .5; }
+
+p {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1.10em;
+  font-weight: 300;
+  line-height: 1.45; }
 
 /*# sourceMappingURL=main.css.map */
