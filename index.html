@@ -2,14 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Hayden Port</title>
+
 		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="http://pjax.heroku.com/jquery.pjax.js"></script>
+
+
 		<!--<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>-->
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
     <link rel="stylesheet" type="text/css" href="slider/css/main.css"/>
+
 
 		<script type="text/javascript" src="slider/slider.js"></script>
 		<script src="js/preview.js"></script>
@@ -18,70 +23,71 @@
 
       $( document ).ready(function(){
         var testSlider = new Slider("test");
+        var testSlider = new Slider("test1");
       });
 
 		</script>
+
 
 	</head>
 	<body>
 		<!--%%%%%%%%%%%%%%%%%%%%%%%% NAVIGATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 			<div class="nav">
-					<div class="bar top"></div>
-					<div class="head link">about</div>
-					<div class="head link">work</div>
-					<div class="head link">portfolio</div>
-					<div class="head link">ideas</div>
-					<div class="head link">contact</div>
-          <div class="head link special"><span class="light">HAYDEN</span> WAGNER</div>
+					<!--<div class="bar top"></div>-->
+						<div class="head nv link">contact</div>
+						<div class="head nv link">ideas</div>
+						<div class="head nv link">portfolio</div>
+						<div class="head nv link">work</div>
+						<div class="head nv link">about</div>
+          <div class="head nm link" id="name"><span class="light">HAYDEN</span> WAGNER</div>
 			</div>
 		<!--%%%%%%%%%%%%%%%%%%%%%%%% NAVIGATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
 		<!--%%%%%%%%%%%%%%%%%%%%%%%%    MEAT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
 
-		<div class="preview right" id="ajax-container">
-		</div>
-
-
 		<div class="container">
 
 				<!--<div class="bar left"></div>-->
 
-				<div class="section">
-					<p class="head title">About</p>
-					<p class="text left-of-button">Hi, my name is Hayden Wagner. I'm a fourth year Media Arts and Technology (BS) Major at the Rochester Institute of Technology.</p>
-					<p class="text left-of-button">In the about section you can learn more about more about me, the activities that I am involved in, and other things that I am interested in.</p>
-					<p class="button full" alt="about">More About Me &#187;</p>
+				<div id="middle-text">
+					<h2 class="masthead sub1">About</h2>
+					<p>Hi, my name is Hayden Wagner. I'm a fourth year Media Arts and Technology (BS) Major at the Rochester Institute of Technology.</p>
+					<p>In the about section you can learn more about more about me, the activities that I am involved in, and other things that I am interested in.</p>
+					<a class="button" href="pages/about.html">More About Me</a>
 				</div>
 
-				<div class="section">
-					<p class="head title">Work</p><!--maybe portfolio??? maybe not-->
-					<p class="text left-of-button">In the work section you can view my past and current employeement positions, and see the experience and skills that I have gained in these positions.<!-- have 'organization' be a link or say 'silver wings' and have it be a link...class and work people will understand but this could be confusing (link could go to about page section that explains silver wings involvement)-->projects.</p>
-					<p class="button full" alt="portfolio">Work &#187;</p>
+				<div id="middle-text">
+					<h2 class="masthead sub1">Work</h2><!--maybe portfolio??? maybe not-->
+					<p>In the work section you can view my past and current employment positions, and see the experience and skills that I gained in these positions.<!-- have 'organization' be a link or say 'silver wings' and have it be a link...class and work people will understand but this could be confusing (link could go to about page section that explains silver wings involvement)--></p>
+					<a class="button" alt="portfolio">Work</a>
 				</div>
 
-				<div class="section">
-					<p class="head title">Portfolio</p><!--maybe portfolio??? maybe not-->
-					<p class="text left-of-button">In the portfolio section you can view my completed class, work, or organization <!-- have 'organization' be a link or say 'silver wings' and have it be a link...class and work people will understand but this could be confusing (link could go to about page section that explains silver wings involvement)-->projects.</p>
-					<p class="button full" alt="portfolio">Full Portolio &#187;</p>
+				<div id="middle-text">
+					<h2 class="masthead sub1">Portfolio</h2><!--maybe portfolio??? maybe not-->
+					<p>In the portfolio section you can view my completed class, work, or organization <!-- have 'organization' be a link or say 'silver wings' and have it be a link...class and work people will understand but this could be confusing (link could go to about page section that explains silver wings involvement)-->projects.</p>
+					<a class="button" alt="portfolio">Full Portolio</a>
 					<p class="text blurb">Portfolio Preview <span class="arrow-adjust">&#8628;</span></p>
           <div id="test"></div>
-          <p class="button full" alt="portfolio">View this project in my portfolio &#187;</p>
+          <a class="button" alt="portfolio">View this project</a>
 				</div>
 
-				<div class="section">
-					<p class="head title">Ideas</p>
-					<p class="text">In the ideas section you can view any independent projects or ideas that I am working on outside of work or school</p>
-					<p class="text">View a preview and short summary of my ideas in the slider below</p>
-					<p class="text">View full idea writeups in the idea section by following the link 'here' or with the top menu; click an idea in the slider to view the full idea in the ideas section.</p>
+				<div id="middle-text">
+					<h2 class="masthead sub1">Ideas</h2>
+					<p>In the ideas section you can view any independent projects or ideas that I am working on outside of work or school.</p>
+					<a class="button" alt="portfolio">My Ideas</a>
+					<p class="text blurb">Ideas Preview <span class="arrow-adjust">&#8628;</span></p>
+          <div id="test1"></div>
+          <a class="button" alt="portfolio">View this idea</a>
 				</div>
 
-				<div class="section">
-					<p class="head title">Contact</p>
+				<div id="middle-text">
+					<h2 class="masthead sub1">Contact</h2>
 
-					<!--<p class="text">Email: hbw6955@rit.edu</p>
+					<!--<p>Email: hbw6955@rit.edu</p>
 					<p class="text">Phone: (607) 342 - 4017</p>-->
 				</div>
+				<div id="middle-text"></div>
 		</div>
 		<!--%%%%%%%%%%%%%%%%%%%%%%%%   MEAT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 

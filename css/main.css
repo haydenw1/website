@@ -1,119 +1,239 @@
-@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,700);
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,600,700,400);
 @import url(http://fonts.googleapis.com/css?family=Roboto);
-html,
-body,
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+p,
+a,
 ul,
 ol {
-  margin: 0;
-  padding: 0; }
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 10px;
+  margin-bottom: 20px; }
 
-html, body {
-  height: 100%;
-  min-height: 100%;
-  width: 100%; }
+ul,
+ol {
+  padding-left: 3em; }
+
+li {
+  margin-bottom: 10px; }
+
+.nav {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+  .nav::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .container {
-  height: 100%;
-  font-size: 1.15em;
-  left: calc(75% - 960px);
-  position: absolute;
-  padding: 50px 0px 0px 0px;
-  width: 960px;
-  font-family: "Raleway", sans-serif; }
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 75px; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
 
-.head {
-  font-size: 24px;
-  opacity: .75; }
-
-.bar {
-  background-image: url("../pent2.jpg");
+#middle-text {
   float: left;
-  margin-top: -50px;
-  width: 5%; }
-  .bar.top {
-    height: 100px; }
-  .bar.left {
-    box-shadow: -3px -3px 6px 0px rgba(0, 0, 0, 0.2);
-    height: calc(100% + 5%); }
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  float: none;
+  margin: 0 auto 50px; }
+  #middle-text:last-child {
+    margin-right: 0; }
+  #middle-text p {
+    padding-left: 1em; }
 
 .button {
-  background-image: -webkit-linear-gradient(top, #04D8EE, #00B0C2);
+  border: 1px solid #076fe4;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 #8ebcf1;
   color: white;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1.1em;
-  float: right;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: #4294f0;
+  background-image: -webkit-linear-gradient(#4294f0, #0776f3);
+  background-image: linear-gradient(#4294f0, #0776f3);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #0065d6;
+  background-clip: padding-box;
+  color: #fff;
+  display: block;
   font-weight: 400;
-  margin-bottom: 9px;
-  cursor: pointer; }
-  .button:hover {
-    background: #2C3536;
-    background-image: -webkit-linear-gradient(top, #90B0B4, #2C3536); }
+  margin: 1.5em auto 0;
+  text-align: center;
+  width: 30%; }
+  .button:hover:not(:disabled) {
+    background-color: #2f87ea;
+    background-image: -webkit-linear-gradient(#2f87ea, #086fe3);
+    background-image: linear-gradient(#2f87ea, #086fe3);
+    box-shadow: inset 0 1px 0 0 #60a2ec;
+    cursor: pointer; }
+  .button:active:not(:disabled), .button:focus:not(:disabled) {
+    border: 1px solid #076fe4;
+    box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3; }
+  .button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+
+.masthead {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: center; }
+  .masthead.sub1 {
+    font-family: "Roboto", Arial, sans-serif;
+    color: #333;
+    font-weight: 500;
+    border-bottom: 1px solid #666;
+    margin: 0 auto .75em;
+    padding-left: 0px;
+    text-align: left; }
+  .masthead.sub2 {
+    text-align: left;
+    font-size: 1.1em;
+    padding-left: 1em; }
+  .masthead .m {
+    text-align: center; }
 
 .nav {
   background: #fff;
   font-size: 0;
-  height: 50px;
+  padding: 10px 0px;
   position: fixed;
-  left: calc(75% - 960px);
+  left: calc(50% - 480px);
   width: 960px;
   z-index: 2; }
-  .nav .link {
+  .nav .nv,
+  .nav .nm {
+    color: #333;
     cursor: pointer;
-    display: inline-block;
-    font-family: "Raleway", sans-serif;
-    margin: 0px 2.5%;
-    opacity: .75;
-    padding: 10px 0px;
-    text-align: center; }
-    .nav .link:hover {
+    font-family: "Raleway", sans-serif; }
+    .nav .nv:hover,
+    .nav .nm:hover {
       color: #04D8EE; }
-  .nav .special {
+  .nav .nm {
+    display: inline-block;
+    font-size: 22pt;
     font-weight: 700;
-    padding: 0px;
-    bottom: 10px;
-    position: absolute;
-    right: 0px; }
-
-.section {
-  float: right;
-  width: 87%;
-  padding: 0% 3%;
-  margin: 15px 0px 0px 0px; }
-  .section .text {
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 1.10em;
-    font-weight: 300;
-    line-height: 1.45; }
-  .section .left-of-button {
-    width: 65%;
     float: left;
-    padding-left: 10px; }
-  .section .blurb {
+    margin: 0; }
+  .nav .nv {
+    font-size: 18pt;
     float: right;
-    clear: right;
-    margin-bottom: 0px;
-    margin-top: 10px;
-    font-size: 1.5em;
-    font-weight: 300;
-    font-style: italic;
-    opacity: .5; }
-    .section .blurb .arrow-adjust {
-      top: 8px;
-      right: 8px;
-      position: relative; }
+    margin: 0 0 0 4%; }
 
+.section .home {
+  width: 65%;
+  margin: 0 auto 1em auto; }
+.section .blurb {
+  float: right;
+  clear: right;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  font-size: 1.25em;
+  font-weight: 300;
+  font-style: italic;
+  opacity: .5; }
+  .section .blurb .arrow-adjust {
+    top: 8px;
+    right: 5px;
+    position: relative; }
+
+/*
+.bar {
+  background-image: url("../pent2.jpg");
+  float: left;
+  margin-top: -50px;
+  width: 5%;
+
+  &.top {
+    height: 100px;
+  }
+
+  &.left {
+    box-shadow: -3px -3px 6px 0px rgba(0, 0, 0, 0.2);
+    height: calc(100% + 5%);
+  }
+}
+*/
+/*
+.button {
+  //color: #04D8EE;
+  background: #04D8EE;
+  color: #fff;
+  //width: 25%;
+  font-size: 1.25em;
+  margin: 1.5em auto 0;
+  text-align: center;
+  //border: 1px solid #666;
+  padding: 5px 7px 8px;
+  border-radius: 10px;
+  //font-size: 1.1em;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:hover {
+    background: #61E0EE;
+  }
+
+  &.home {
+    width: 65%;
+  }
+}*/
 .slider {
-  clear: both; }
-
-.title {
-  border-bottom: 1.5px solid gainsboro;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  margin: 15px 0px 0px -5px;
-  text-align: left;
-  text-indent: .25em; }
+  clear: both;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 1em; }
 
 span.light {
   font-weight: 400; }
@@ -125,11 +245,5 @@ span.light {
   width: 500px;
   height: 100%;
   opacity: .5; }
-
-p {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 1.10em;
-  font-weight: 300;
-  line-height: 1.45; }
 
 /*# sourceMappingURL=main.css.map */
