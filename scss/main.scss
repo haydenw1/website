@@ -11,41 +11,51 @@
 //////@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,700);
 @import url(https://fonts.googleapis.com/css?family=Raleway:500,600,700,400);
 
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+//@import url(http://fonts.googleapis.com/css?family=Roboto);
 
 ////////@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,300,900);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+//@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
 
 $font-raleway: 'Raleway', sans-serif;
-$font-roboto: 'Roboto', Arial, sans-serif;
-$font-lato: 'Lato', Arial, sans-serif;
+//$font-roboto: 'Roboto', Arial, sans-serif;
+$font-lato: 'LatoLatinWeb', Arial, sans-serif;
+$font-lato-semibold: 'LatoLatinWebSemibold', 'LatoLatinWeb', Arial, sans-serif;
+
+$break-mobile-small: 340px;
+$break-mobile-large: 500px;
+
+$break-small: 590px;
+$break-smallMed: 650px;
+$break-medium: 740px;
+$break-medLarge: 850px;
+$break-large: 1000px;
+
+$header-height: 50px;
 
 
 html,body{
-  //height: 100%;
-  //min-height: 100%;
-  //overflow-x: hidden;
-  ////overflow-y: hidden;
-  //width: 100%;
 }
 
 body {
+  background: #f7f7f5;
 }
 
 p,
 a,
 ul,
 ol {
+  color: #424242;
   font-family: $font-lato;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.69;
   margin-top: 10px;
   margin-bottom: 20px;
+  //padding-left: 1em;
 }
 
 ul,
 ol {
-  padding-left: 3em;
+  padding-left: 2em;
 }
 
 li {
@@ -53,116 +63,279 @@ li {
 }
 
 .nav {
-  @include outer-container(960px);
+  //@include outer-container(960px);
 }
 
 .container {
   @include outer-container(960px);
 
   position: relative;
-  top: 75px;
+  top: 60px;
+
+  @media screen and (max-width: $break-mobile-large) {
+    top: 50px;
+  }
 }
 
 #middle-text {
   @include span-columns(9 of 12);
 
   float: none;
-  margin: 0 auto 50px;
+  margin: 0 auto $header-height;
 
   p {
-    padding-left: 1em;
+    //padding-left: 1em;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    @include span-columns(10 of 12);
+
+    float: none;
+    margin: 0 auto $header-height;
+  }
+
+  @media screen and (max-width: $break-mobile-large) {
+    @include span-columns(11 of 12);
+
+    float: none;
+    margin: 0 auto $header-height;
   }
 }
 
 .button {
-  @include button;
+  //@include button;
 
+  padding: .5em;
+  background-color: rgb(238, 103, 4);
+  border-radius: 5px;
   color: #fff;
   //cursor: pointer;
   display: block;
     //font-size: 1.25em;
-  font-weight: 400;
-  margin: 1.5em auto 0;
+  font-weight: 600;
+  margin: 1.5em auto 1em;
   text-align: center;
+  text-decoration: none;
   width: 30%;
 
   &:hover {
     //background: #61E0EE;
   }
+
+  @media screen and (max-width: $break-smallMed) {
+    //left: calc(50% - 275px);
+    width: 40%;
+  }
+
+  @media screen and (max-width: $break-mobile-large) {
+    //left: calc(50% - 275px);
+    width: 50%;
+  }
 }
-
-
-
-
 
 
 //headings
 
 
 .masthead {
-  font-family: $font-raleway;
-  font-weight: 600;
-  font-size: 1.5em;
-  text-align: center;
+  font-family: $font-lato-semibold;
+  //font-weight: 600;
+  font-size: 2.1em;
+  margin: 1em 0;
+  text-align: left;
+
+  @media screen and (max-width: $break-mobile-small) {
+    font-size: 1.75em;
+  }
+
+  @media screen and (max-width: $break-mobile-large) {
+    font-size: 2em;
+  }
+
+
 
   &.sub1 {
-    font-family: $font-roboto;
+    font-family: $font-lato;
+    font-size: 1.75em;
     color: #333;
     font-weight: 500;
-    border-bottom: 1px solid #666;
-    margin: 0 auto .75em;
+    //border-bottom: 1px solid #666;
+    margin: 0 auto 1em;
     padding-left: 0px;
     text-align: left;
   }
 
   &.sub2 {
-    text-align: left;
-    font-size: 1.1em;
-    padding-left: 1em;
+        text-align: left;
+    font-size: 1.25em;
+    font-weight: bold;
+    font-style: italic;
   }
-
 
   .m {
     text-align: center;
   }
 }
 
+.keep-nav {
+  background: #fff;
+  height: $header-height;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
 
+  @media screen and (max-width: $break-mobile-small) {
+    height: 44px;
+  }
+
+  @media screen and (max-width: $break-medLarge) {
+    background-color: rgb(4, 216, 238);
+  }
+}
 
 .nav {
-  background: #fff;
   font-size: 0; //to fix inline-block space problems of children
   padding: 10px 0px;
-  position: fixed;
-  left: calc(50% - 480px);
+  //position: fixed;
+  margin: 0 auto;
+  //left: calc(50% - 480px);
   width: 960px;
-  z-index: 2;
+  z-index: 3;
 
-  .nv,
   .nm {
     color: #333;
     cursor: pointer;
     font-family: $font-raleway;
-
-    &:hover {
-      color: #04D8EE;
-    }
-  }
-
-  .nm {
     display: inline-block;
     font-size: 22pt;
     font-weight: 700;
     float: left;
     margin: 0;
+
+    &:hover {
+      color: rgb(4, 216, 238);
+    }
+
+    @media screen and (max-width: $break-large) {
+      font-size: 20pt;
+      font-weight: 700;
+    }
+
+    @media screen and (max-width: $break-mobile-small) {
+      font-size: 18pt;
+    }
+
+    @media screen and (max-width: $break-medLarge) {
+      color: #fff;
+      &:hover {
+        color: #424242;
+      }
+      //text-shadow: 1px 1px 1px gray;
+
+      span {
+        font-weight: 700;
+      }
+    }
   }
 
-  .nv {
-    font-size: 18pt; //has to be in 'pt' because on inline fix
-    float: right;
-    margin: 0 0 0 4%;
-    //padding: 11px 0px;
+  .nv-holder {
+    .nv {
+      color: #333;
+      cursor: pointer;
+      font-family: $font-raleway;
+      font-size: 18pt; //has to be in 'pt' because on inline fix
+      float: right;
+      margin: 0 0 0 4%;
+        //padding: 11px 0px;
+
+      &:hover {
+        color: rgb(4, 216, 238);
+      }
+
+      @media screen and (max-width: $break-large) {
+        font-size: 15pt; //has to be in 'pt' because on inline fix
+        margin: 3px 0 0 4%;
+      }
+
+      @media screen and (max-width: $break-medLarge) {
+        display: none;
+      }
+    }
   }
+
+  .menu{
+    display: none;
+    float: right;
+    top: -10px;
+    position: relative;
+    width: 50px;
+    height: 47px;
+
+    &:hover{
+      #Layer_1 {
+        fill: #424242;
+      }
+    }
+
+    @media screen and (max-width: $break-medLarge) {
+      display: block;
+    }
+
+    @media screen and (max-width: $break-mobile-small) {
+      right: -6px;
+      height: 44px;
+    }
+
+
+
+    #Layer_1 {
+      fill: white;
+      top: 13px;
+      position: relative;
+      height: 20px;
+      width: auto;
+
+      @media screen and (max-width: $break-mobile-small) {
+        height: 18px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-large) {
+    //left: calc(50% - 400px);
+    width: 800px;
+  }
+
+  @media screen and (max-width: $break-medLarge) {
+    //left: calc(50% - 350px);
+    width: 74.41059%;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    //left: calc(50% - 300px);
+    //width: 600px;
+    width: 82.94039%;
+
+  }
+/*
+  @media screen and (max-width: $break-smallMed) {
+    //left: calc(50% - 275px);
+    width: 550px;
+  }
+
+  @media screen and (max-width: $break-small) {
+    //left: calc(50% - 240px);
+    width: 480px;
+  }
+*/
+  @media screen and (max-width: $break-mobile-large) {
+    //left: calc(50% - 240px);
+    width: 91.4702%;
+  }
+
+
 }
 
 .section {
@@ -201,58 +374,75 @@ li {
   }
 }
 
-/*
-.bar {
-  background-image: url("../pent2.jpg");
-  float: left;
-  margin-top: -50px;
-  width: 5%;
-
-  &.top {
-    height: 100px;
-  }
-
-  &.left {
-    box-shadow: -3px -3px 6px 0px rgba(0, 0, 0, 0.2);
-    height: calc(100% + 5%);
-  }
-}
-*/
-
-/*
-.button {
-  //color: #04D8EE;
-  background: #04D8EE;
-  color: #fff;
-  //width: 25%;
-  font-size: 1.25em;
-  margin: 1.5em auto 0;
-  text-align: center;
-  //border: 1px solid #666;
-  padding: 5px 7px 8px;
-  border-radius: 10px;
-  //font-size: 1.1em;
-  font-weight: 400;
-  cursor: pointer;
-
-  &:hover {
-    background: #61E0EE;
-  }
-
-  &.home {
-    width: 65%;
-  }
-}*/
-
-//#FF8484 compli?
 
 
 
 .slider {
-  clear: both;
-  max-width: 700px;
-  margin: 0 auto;
-  margin-bottom: 1em;
+  margin: 3em 0;
+
+  .s-holder {
+
+    //.s-nav {
+    //  &:hover {
+    //    + .content{
+    //      .slider-title,
+    //      .slider-desc {
+    //        width: 92%;
+    //      }
+    //    }
+    //  }
+    //}
+
+    .s-nav {
+      &:hover {
+        //background-color: rgba(4, 216, 238, .75);
+      }
+
+      &:active {
+        //background-color: rgba(4, 216, 238, .85);
+      }
+
+      @media screen and (max-width: $break-large) {
+        width: 9%;
+      }
+
+      @media screen and (max-width: $break-small) {
+        //width: 1%;
+        img {
+          opacity: .75;
+        }
+      }
+    }
+
+    .content {
+      //clear: both;
+      //max-width: 700px;
+      //margin: 0 auto;
+      //margin-bottom: 1em;
+      .slider-title,
+      .slider-desc {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding-left: 10%;
+        padding-right: 10%;
+        width: 100%;
+
+        @media screen and (max-width: $break-large) {
+          padding-left: 11%;
+          padding-right: 11%;
+        }
+      }
+
+      .slider-title {
+        font-family: $font-raleway;
+        font-weight: 600;
+        font-size: 1.25em;
+      }
+
+      .slider-desc {
+        font-family: $font-lato;
+      }
+    }
+  }
 }
 
 
@@ -261,6 +451,10 @@ li {
 
 span.light {
   font-weight: 400;
+}
+
+span.bold {
+  font-weight: bold;
 }
 
 
