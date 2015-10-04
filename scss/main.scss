@@ -20,6 +20,14 @@ $font-raleway: 'Raleway', sans-serif;
 //$font-roboto: 'Roboto', Arial, sans-serif;
 $font-lato: 'LatoLatinWeb', Arial, sans-serif;
 $font-lato-semibold: 'LatoLatinWebSemibold', 'LatoLatinWeb', Arial, sans-serif;
+$font-lato-hairline: 'LatoLatinWebHairline', 'LatoLatinWeb', Arial, sans-serif;
+$font-lato-light: 'LatoLatinWebLight', 'LatoLatinWeb', Arial, sans-serif;
+$font-lato-thin: 'LatoLatinWebThin', 'LatoLatinWeb', Arial, sans-serif;
+$font-lato-heavy: 'LatoLatinWebHeavy', 'LatoLatinWeb', Arial, sans-serif;
+
+$orange: rgb(238, 103, 4);
+$blue: rgb(4, 216, 238);
+
 
 $break-mobile-small: 340px;
 $break-mobile-large: 500px;
@@ -81,7 +89,15 @@ li {
   @include span-columns(9 of 12);
 
   float: none;
-  margin: 0 auto $header-height;
+  margin: 0 auto 75px;
+
+  &.above-slider {
+    margin: 0 auto 30px;
+  }
+
+  &.first-blurb {
+    margin: 50px auto 75px;
+  }
 
   p {
     //padding-left: 1em;
@@ -91,7 +107,7 @@ li {
     @include span-columns(10 of 12);
 
     float: none;
-    margin: 0 auto $header-height;
+    margin: 0 auto 75px;
   }
 
   @media screen and (max-width: $break-mobile-large) {
@@ -106,7 +122,7 @@ li {
   //@include button;
 
   padding: .5em;
-  background-color: rgb(238, 103, 4);
+  background-color: $orange;
   border-radius: 5px;
   color: #fff;
   //cursor: pointer;
@@ -122,6 +138,10 @@ li {
     //background: #61E0EE;
   }
 
+  &.below-slider {
+    margin: 25px auto 75px;
+  }
+
   @media screen and (max-width: $break-smallMed) {
     //left: calc(50% - 275px);
     width: 40%;
@@ -134,7 +154,7 @@ li {
 }
 
 
-//headings
+//headings-----------------------------------------------------------------
 
 
 .masthead {
@@ -143,6 +163,16 @@ li {
   font-size: 2.1em;
   margin: 1em 0;
   text-align: left;
+  color: #424242;
+
+  &.top {
+    margin: 1em 0;
+    padding: .3em 0 .2em .5em;
+    right: .5em;
+    width: calc(100% + .5em);
+    position: relative;
+    background-color: white;
+  }
 
   @media screen and (max-width: $break-mobile-small) {
     font-size: 1.75em;
@@ -163,6 +193,11 @@ li {
     margin: 0 auto 1em;
     padding-left: 0px;
     text-align: left;
+
+    &.position {
+      margin-bottom: .75em;
+      margin-top: 50px;
+    }
   }
 
   &.sub2 {
@@ -379,8 +414,13 @@ li {
 
 .slider {
   margin: 3em 0;
+  max-width: 715px;
+  margin: 0 auto;
 
   .s-holder {
+
+    background-color: rgba(0,0,0,0);
+    //border-radius: 20px;
 
     //.s-nav {
     //  &:hover {
@@ -406,10 +446,17 @@ li {
         width: 9%;
       }
 
-      @media screen and (max-width: $break-small) {
+      @media screen and (max-width: $break-medLarge) {
         //width: 1%;
         img {
           opacity: .75;
+        }
+      }
+
+      @media screen and (max-width: $break-mobile-large) {
+        //width: 1%;
+        img {
+          opacity: .5;
         }
       }
     }
@@ -419,12 +466,18 @@ li {
       //max-width: 700px;
       //margin: 0 auto;
       //margin-bottom: 1em;
+      img {
+        display: block;
+      }
+      //
       .slider-title,
       .slider-desc {
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: #ddd;
         padding-left: 10%;
         padding-right: 10%;
         width: 100%;
+        color: #424242;
+        font-family: $font-lato-semibold;
 
         @media screen and (max-width: $break-large) {
           padding-left: 11%;
@@ -433,7 +486,7 @@ li {
       }
 
       .slider-title {
-        font-family: $font-raleway;
+        //font-family: $font-raleway;
         font-weight: 600;
         font-size: 1.25em;
       }
@@ -448,14 +501,90 @@ li {
 
 
 
+span {
+  &.light-name,
+  .normal {
+    font-weight: 400;
+  }
 
-span.light {
-  font-weight: 400;
+  &.italic {
+    font-style: italic;
+  }
+
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.clarifier {
+    font-size: 70%;
+    vertical-align: middle;
+    padding-left: .25em;
+  }
+
+  &.note {
+    color: #dd0055;
+  }
+
+  &.hairline {
+    font-family: $font-lato-hairline;
+  }
+
+  &.light {
+    font-family: $font-lato-light;
+  }
+
+  &.thin {
+    font-family: $font-lato-thin;
+  }
+
+  &.semibold {
+    font-family: $font-lato-semibold;
+  }
+
+  &.heavy {
+    font-family: $font-lato-heavy;
+  }
 }
 
-span.bold {
-  font-weight: bold;
+
+
+
+p {
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+
+  &.note {
+    color: #dd0055;
+  }
+
+  &.tag {
+    float: right;
+    width: 15%;
+    height: 50.7969px;
+    margin: 0;
+    top: -10px;
+    background-color: $orange;
+    position: relative;
+
+    &.passive {
+      width: 20px;
+    }
+  }
+
+  &.heavy {
+    font-family: $font-lato-heavy;
+  }
 }
+
 
 
 .preview {
@@ -468,4 +597,97 @@ span.bold {
 }
 
 
+.details {
+      margin: 0em 0em 2em;
+}
 
+.job-details {
+  //float: right;
+  //clear: right;
+  //width: 33.33%;
+
+      line-height: 1;
+    margin: 0;
+    padding: 0;
+
+    margin-top: 7px;
+    font-size: 1em;
+    //font-weight: bold;
+
+}
+
+
+.split-text-holder {
+  //background-color: #fff;
+  margin: 2em 2.35765% 3em;
+  overflow: auto;
+}
+
+#split-text {
+  @include span-columns(6 of 12);
+
+  background-color: rgba(0,0,0,.1);
+  border-radius: 15px;
+
+  ul {
+    padding: 0em 1em 0em 2em;
+
+    li {
+      font-weight: bold;
+    }
+  }
+
+  p {
+    //padding-left: 1em;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    @include span-columns(10 of 12);
+
+    float: none;
+    margin: 0 auto ;
+    padding: 1px 0px 10px 0px;
+    margin: 25px auto;
+    margin-top: 0px;
+
+    &:last-child {
+      margin-right: auto;
+      margin-bottom: 0px;
+    }
+  }
+
+  @media screen and (max-width: $break-mobile-large) {
+    //@include span-columns(11 of 12);
+
+    //float: none;
+    //margin: 0 auto $header-height;
+  }
+}
+
+.skills {
+  padding: 15px 0px 10px 0px;
+  //margin: 0px;
+  background-color: $orange;
+  color: white;
+  line-height: 1;
+  margin: 15px 0px 0px;
+  padding: 20px 0px 17px;
+}
+
+
+.blurb {
+  font-family: $font-lato-heavy;
+  font-size: 1.5em;
+  //color: $orange;
+      text-shadow: 1px 1px 1px rgba(0,0,0,.15);
+}
+
+.text-link {
+  font-family: $font-lato-heavy;
+  text-decoration: none;
+  //font-style: italic;
+  //
+  &:hover {
+    color: $blue;
+  }
+}

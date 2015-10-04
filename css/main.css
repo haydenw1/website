@@ -80,9 +80,13 @@ li {
   margin-right: 2.35765%;
   width: 74.41059%;
   float: none;
-  margin: 0 auto 50px; }
+  margin: 0 auto 75px; }
   #middle-text:last-child {
     margin-right: 0; }
+  #middle-text.above-slider {
+    margin: 0 auto 30px; }
+  #middle-text.first-blurb {
+    margin: 50px auto 75px; }
   @media screen and (max-width: 740px) {
     #middle-text {
       float: left;
@@ -90,7 +94,7 @@ li {
       margin-right: 2.35765%;
       width: 82.94039%;
       float: none;
-      margin: 0 auto 50px; }
+      margin: 0 auto 75px; }
       #middle-text:last-child {
         margin-right: 0; } }
   @media screen and (max-width: 500px) {
@@ -115,6 +119,8 @@ li {
   text-align: center;
   text-decoration: none;
   width: 30%; }
+  .button.below-slider {
+    margin: 25px auto 75px; }
   @media screen and (max-width: 650px) {
     .button {
       width: 40%; } }
@@ -126,7 +132,15 @@ li {
   font-family: "LatoLatinWebSemibold", "LatoLatinWeb", Arial, sans-serif;
   font-size: 2.1em;
   margin: 1em 0;
-  text-align: left; }
+  text-align: left;
+  color: #424242; }
+  .masthead.top {
+    margin: 1em 0;
+    padding: .3em 0 .2em .5em;
+    right: .5em;
+    width: calc(100% + .5em);
+    position: relative;
+    background-color: white; }
   @media screen and (max-width: 340px) {
     .masthead {
       font-size: 1.75em; } }
@@ -141,6 +155,9 @@ li {
     margin: 0 auto 1em;
     padding-left: 0px;
     text-align: left; }
+    .masthead.sub1.position {
+      margin-bottom: .75em;
+      margin-top: 50px; }
   .masthead.sub2 {
     text-align: left;
     font-size: 1.25em;
@@ -278,36 +295,85 @@ li {
     position: relative; }
 
 .slider {
-  margin: 3em 0; }
-  @media screen and (max-width: 1000px) {
-    .slider .s-holder .s-nav {
-      width: 9%; } }
-  @media screen and (max-width: 590px) {
-    .slider .s-holder .s-nav img {
-      opacity: .75; } }
-  .slider .s-holder .content .slider-title,
-  .slider .s-holder .content .slider-desc {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding-left: 10%;
-    padding-right: 10%;
-    width: 100%; }
+  margin: 3em 0;
+  max-width: 715px;
+  margin: 0 auto; }
+  .slider .s-holder {
+    background-color: transparent; }
     @media screen and (max-width: 1000px) {
-      .slider .s-holder .content .slider-title,
-      .slider .s-holder .content .slider-desc {
-        padding-left: 11%;
-        padding-right: 11%; } }
-  .slider .s-holder .content .slider-title {
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    font-size: 1.25em; }
-  .slider .s-holder .content .slider-desc {
-    font-family: "LatoLatinWeb", Arial, sans-serif; }
+      .slider .s-holder .s-nav {
+        width: 9%; } }
+    @media screen and (max-width: 850px) {
+      .slider .s-holder .s-nav img {
+        opacity: .75; } }
+    @media screen and (max-width: 500px) {
+      .slider .s-holder .s-nav img {
+        opacity: .5; } }
+    .slider .s-holder .content img {
+      display: block; }
+    .slider .s-holder .content .slider-title,
+    .slider .s-holder .content .slider-desc {
+      background-color: #ddd;
+      padding-left: 10%;
+      padding-right: 10%;
+      width: 100%;
+      color: #424242;
+      font-family: "LatoLatinWebSemibold", "LatoLatinWeb", Arial, sans-serif; }
+      @media screen and (max-width: 1000px) {
+        .slider .s-holder .content .slider-title,
+        .slider .s-holder .content .slider-desc {
+          padding-left: 11%;
+          padding-right: 11%; } }
+    .slider .s-holder .content .slider-title {
+      font-weight: 600;
+      font-size: 1.25em; }
+    .slider .s-holder .content .slider-desc {
+      font-family: "LatoLatinWeb", Arial, sans-serif; }
 
-span.light {
+span.light-name,
+span .normal {
   font-weight: 400; }
-
+span.italic {
+  font-style: italic; }
 span.bold {
   font-weight: bold; }
+span.clarifier {
+  font-size: 70%;
+  vertical-align: middle;
+  padding-left: .25em; }
+span.note {
+  color: #dd0055; }
+span.hairline {
+  font-family: "LatoLatinWebHairline", "LatoLatinWeb", Arial, sans-serif; }
+span.light {
+  font-family: "LatoLatinWebLight", "LatoLatinWeb", Arial, sans-serif; }
+span.thin {
+  font-family: "LatoLatinWebThin", "LatoLatinWeb", Arial, sans-serif; }
+span.semibold {
+  font-family: "LatoLatinWebSemibold", "LatoLatinWeb", Arial, sans-serif; }
+span.heavy {
+  font-family: "LatoLatinWebHeavy", "LatoLatinWeb", Arial, sans-serif; }
+
+p.bold {
+  font-weight: bold; }
+p.center {
+  text-align: center; }
+p.italic {
+  font-style: italic; }
+p.note {
+  color: #dd0055; }
+p.tag {
+  float: right;
+  width: 15%;
+  height: 50.7969px;
+  margin: 0;
+  top: -10px;
+  background-color: #ee6704;
+  position: relative; }
+  p.tag.passive {
+    width: 20px; }
+p.heavy {
+  font-family: "LatoLatinWebHeavy", "LatoLatinWeb", Arial, sans-serif; }
 
 .preview {
   left: 77%;
@@ -316,5 +382,68 @@ span.bold {
   width: 500px;
   height: 100%;
   opacity: .5; }
+
+.details {
+  margin: 0em 0em 2em; }
+
+.job-details {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  margin-top: 7px;
+  font-size: 1em; }
+
+.split-text-holder {
+  margin: 2em 2.35765% 3em;
+  overflow: auto; }
+
+#split-text {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15px; }
+  #split-text:last-child {
+    margin-right: 0; }
+  #split-text ul {
+    padding: 0em 1em 0em 2em; }
+    #split-text ul li {
+      font-weight: bold; }
+  @media screen and (max-width: 740px) {
+    #split-text {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      float: none;
+      margin: 0 auto;
+      padding: 1px 0px 10px 0px;
+      margin: 25px auto;
+      margin-top: 0px; }
+      #split-text:last-child {
+        margin-right: 0; }
+      #split-text:last-child {
+        margin-right: auto;
+        margin-bottom: 0px; } }
+
+.skills {
+  padding: 15px 0px 10px 0px;
+  background-color: #ee6704;
+  color: white;
+  line-height: 1;
+  margin: 15px 0px 0px;
+  padding: 20px 0px 17px; }
+
+.blurb {
+  font-family: "LatoLatinWebHeavy", "LatoLatinWeb", Arial, sans-serif;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15); }
+
+.text-link {
+  font-family: "LatoLatinWebHeavy", "LatoLatinWeb", Arial, sans-serif;
+  text-decoration: none; }
+  .text-link:hover {
+    color: #04d8ee; }
 
 /*# sourceMappingURL=main.css.map */
