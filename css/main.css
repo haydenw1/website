@@ -179,7 +179,7 @@ li {
       height: 44px; } }
   @media screen and (max-width: 850px) {
     .keep-nav {
-      background-color: #04d8ee; } }
+      background-color: #424242; } }
 
 .nav {
   font-size: 0;
@@ -206,7 +206,12 @@ li {
     font-size: 22pt;
     font-weight: 700;
     float: left;
-    margin: 0; }
+    margin: 0;
+    -webkit-user-select: none;
+    /* Chrome/Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none; }
     .nav .nm:hover {
       color: #04d8ee; }
     @media screen and (max-width: 1000px) {
@@ -220,25 +225,61 @@ li {
       .nav .nm {
         color: #fff; }
         .nav .nm:hover {
-          color: #424242; }
+          color: #04d8ee; }
         .nav .nm span {
           font-weight: 700; } }
-  .nav .nv-holder .nv {
-    color: #333;
-    cursor: pointer;
-    font-family: "Raleway", sans-serif;
-    font-size: 18pt;
-    float: right;
-    margin: 0 0 0 4%; }
-    .nav .nv-holder .nv:hover {
-      color: #04d8ee; }
-    @media screen and (max-width: 1000px) {
-      .nav .nv-holder .nv {
-        font-size: 15pt;
-        margin: 3px 0 0 4%; } }
+  .nav .nv-holder {
+    display: none; }
     @media screen and (max-width: 850px) {
-      .nav .nv-holder .nv {
-        display: none; } }
+      .nav .nv-holder {
+        right: 12.794705%;
+        position: fixed;
+        background-color: #424242;
+        top: 50px;
+        box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.3);
+        display: block; } }
+    @media screen and (max-width: 740px) {
+      .nav .nv-holder {
+        display: block;
+        right: 8.529805%; } }
+    @media screen and (max-width: 500px) {
+      .nav .nv-holder {
+        right: 4.2649%; } }
+    @media screen and (max-width: 340px) {
+      .nav .nv-holder {
+        top: 44px; } }
+    .nav .nv-holder .na {
+      color: #333;
+      cursor: pointer;
+      font-family: "Raleway", sans-serif;
+      font-size: 18pt;
+      float: right;
+      margin: 0 0 0 4%;
+      -webkit-user-select: none;
+      /* Chrome/Safari */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none; }
+      .nav .nv-holder .na:hover {
+        color: #04d8ee; }
+      @media screen and (max-width: 1000px) {
+        .nav .nv-holder .na {
+          font-size: 15pt;
+          margin: 3px 0 0 4%; } }
+      @media screen and (max-width: 850px) {
+        .nav .nv-holder .na {
+          display: none;
+          text-align: center;
+          font-size: 20px;
+          font-weight: 600;
+          color: #fff;
+          padding: 20px 30px;
+          margin: 0; }
+          .nav .nv-holder .na:hover {
+            color: #04d8ee; }
+          .nav .nv-holder .na:active {
+            color: #424242;
+            background-color: #fff; } }
   .nav .menu {
     display: none;
     float: right;
@@ -247,7 +288,7 @@ li {
     width: 50px;
     height: 47px; }
     .nav .menu:hover #Layer_1 {
-      fill: #424242; }
+      fill: #04d8ee; }
     @media screen and (max-width: 850px) {
       .nav .menu {
         display: block; } }
@@ -435,7 +476,7 @@ p.heavy {
   margin: 15px 0px 0px;
   padding: 20px 0px 17px; }
 
-.blurb {
+.blurb-front {
   font-family: "LatoLatinWebHeavy", "LatoLatinWeb", Arial, sans-serif;
   font-size: 1.5em;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15); }
@@ -444,6 +485,28 @@ p.heavy {
   font-family: "LatoLatinWebHeavy", "LatoLatinWeb", Arial, sans-serif;
   text-decoration: none; }
   .text-link:hover {
+    color: #04d8ee; }
+
+.nv {
+  color: #333;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-size: 18pt;
+  float: right;
+  margin: 0 0 0 4%;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none; }
+  @media screen and (max-width: 850px) {
+    .nv {
+      display: none; } }
+  @media screen and (max-width: 1000px) {
+    .nv {
+      font-size: 15pt;
+      margin: 3px 0 0 4%; } }
+  .nv:hover {
     color: #04d8ee; }
 
 /*# sourceMappingURL=main.css.map */
