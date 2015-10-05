@@ -113,6 +113,7 @@ li {
   background-color: #ee6704;
   border-radius: 5px;
   color: #fff;
+  cursor: pointer;
   display: block;
   font-weight: 600;
   margin: 1.5em auto 1em;
@@ -127,6 +128,27 @@ li {
   @media screen and (max-width: 500px) {
     .button {
       width: 50%; } }
+  .button.contact-show {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-top: 0px; }
+    .button.contact-show:last-child {
+      margin-right: 0; }
+  .button.contact-copy {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-top: 0px;
+    display: none;
+    margin-right: 0px; }
+    .button.contact-copy:last-child {
+      margin-right: 0; }
+
+#phone {
+  margin-top: 6em; }
 
 .masthead {
   font-family: "LatoLatinWebSemibold", "LatoLatinWeb", Arial, sans-serif;
@@ -162,7 +184,7 @@ li {
     text-align: left;
     font-size: 1.25em;
     font-weight: bold;
-    font-style: italic; }
+    font-family: "LatoLatinWebHeavy", "LatoLatinWeb", Arial, sans-serif; }
   .masthead .m {
     text-align: center; }
 
@@ -351,7 +373,9 @@ li {
       .slider .s-holder .s-nav img {
         opacity: .5; } }
     .slider .s-holder .content img {
-      display: block; }
+      display: block;
+      border: 0px solid black;
+      border-radius: 0px; }
     .slider .s-holder .content .slider-title,
     .slider .s-holder .content .slider-desc {
       background-color: #ddd;
@@ -366,6 +390,7 @@ li {
           padding-left: 11%;
           padding-right: 11%; } }
     .slider .s-holder .content .slider-title {
+      border-top: 5px solid #424242;
       font-weight: 600;
       font-size: 1.25em; }
     .slider .s-holder .content .slider-desc {
@@ -413,6 +438,11 @@ p.tag {
   position: relative; }
   p.tag.passive {
     width: 20px; }
+    @media screen and (max-width: 400px) {
+      p.tag.passive {
+        display: none; } }
+p.front {
+  font-size: 20px; }
 p.heavy {
   font-family: "LatoLatinWebHeavy", "LatoLatinWeb", Arial, sans-serif; }
 
@@ -468,6 +498,40 @@ p.heavy {
         margin-right: auto;
         margin-bottom: 0px; } }
 
+.tri-text-holder {
+  overflow: auto;
+  margin: 2em; }
+
+#tri-text {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15px; }
+  #tri-text:last-child {
+    margin-right: 0; }
+  #tri-text ul {
+    padding: 0em 1em 0em 2em; }
+    #tri-text ul li {
+      font-weight: bold; }
+  @media screen and (max-width: 850px) {
+    #tri-text {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      float: none;
+      margin: 0 auto;
+      padding: 1px 0px 10px 0px;
+      margin: 25px auto;
+      margin-top: 0px; }
+      #tri-text:last-child {
+        margin-right: 0; }
+      #tri-text:last-child {
+        margin-right: auto;
+        margin-bottom: 0px; } }
+
 .skills {
   padding: 15px 0px 10px 0px;
   background-color: #ee6704;
@@ -483,7 +547,8 @@ p.heavy {
 
 .text-link {
   font-family: "LatoLatinWebHeavy", "LatoLatinWeb", Arial, sans-serif;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #ee6704; }
   .text-link:hover {
     color: #04d8ee; }
 
@@ -508,5 +573,40 @@ p.heavy {
       margin: 3px 0 0 4%; } }
   .nv:hover {
     color: #04d8ee; }
+
+.contact-text {
+  padding: .5em;
+  border-radius: 5px;
+  border: 2px solid #424242;
+  color: #424242;
+  display: block;
+  font-weight: 600;
+  margin: 1.5em auto 1em;
+  text-align: center; }
+
+img .full {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  img .full:last-child {
+    margin-right: 0; }
+img.three-quarter {
+  width: 75%;
+  border: 2px solid #fff;
+  margin: 3em auto 1em;
+  border-radius: 15px;
+  display: block; }
+  @media screen and (max-width: 650px) {
+    img.three-quarter {
+      width: 90%; } }
+  @media screen and (max-width: 400px) {
+    img.three-quarter {
+      width: 100%; } }
+
+.caption {
+  font-family: "LatoLatinWebLight", "LatoLatinWeb", Arial, sans-serif;
+  margin: 1em 0em 3em;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

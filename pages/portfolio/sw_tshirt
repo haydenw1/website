@@ -11,17 +11,17 @@
 
 
     <!--<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>-->
-    <link rel="stylesheet" type="text/css" href="fonts/LatoLatinWeb/latolatinfonts.css"/>
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <link rel="stylesheet" type="text/css" href="slider/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../fonts/LatoLatinWeb/latolatinfonts.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../slider/css/main.css"/>
 
-    <script type="text/javascript" src="slider/json/sliderJSON.js"></script>
-    <script type="text/javascript" src="slider/slider.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="../../../slider/json/sliderJSON.js"></script>
+    <script type="text/javascript" src="../../../slider/slider.js"></script>
+    <script type="text/javascript" src="../../../js/main.js"></script>
 
     <script type="text/javascript">
-      //new Slider("test");
-      //new Slider("test1");
+     // new Slider("test");
+     // new Slider("test1");
     </script>
 
 
@@ -85,21 +85,31 @@
         <!--<div class="bar left"></div>-->
 
         <div id="middle-text">
-          <h2 class="masthead">School of Media Sciences App</h2>
-          <p class="bold">A showcase app developed by Rochester Institute of Technology students, using Adobe's Digital Publishing Solution</p>
-          <a class="button" href="pages/app.html">View the App</a>
+          
+        <img class="full" src="sw_tshirt_white.jpg">
+
+          <h1 class="masthead top">Silver Wings T-Shirt<p class="tag passive"></p></h1>
+
+          <p>This was a project for Silver Wings when I was the Chapter Public Affairs Officer. We wanted a newer design that our members would want to wear and show off.</p>
+
+          <h2 class="masthead sub1">Approach</h2>
+
+          <p>My chapter wanted to continue to make a type-based t-shirt, focusing on the Silver Wings motto. I agreed with this, and I wanted to use a sans-serif display type to make the t-shirt design more modern looking than the t-shirts we had made in the past.</p>
+
+          <p>I chose blue, white, and yellow for the available colors in the designs, and then made a clipping mask with the last word and a picture of the American Flag. This added color and some depth to the design. I also slightly distressed some of the words in the final design to add more depth to the type in the design.</p>
+
+          <h2 class="masthead sub1">Summary and Thoughts</h2>
+          <p>The blue text t-shirt design did get printed, and I was disapointed with the results; we had wanted a darker gray for the shirt, and when the design came back the flag section of the design looked discolored.</p>
+          <p>If I had to do it over I would choose the white type design and make sure the flag was proofed by the tshirt makers.</p> 
+          <p class="bold">I think the design was a success though, and we plan to use it again this year with a few tweaks and the right t-shirt.</p>
+
         </div>
-
-        <div id="middle-text">
-          <h2 class="masthead">Silver Wings T-Shirt Design</h2>
-          <p class="bold">A Silver Wings chapter project to design a shirt that was more modern and looked better than the older designs.</p>
-          <a class="button" href="pages/sw_tshirt.html">See the Tee/a>
-        </div>
-
-        
-    <!--%%%%%%%%%%%%%%%%%%%%%%%%   MEAT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+        <div id="middle-text"></div>
+    </div>
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%   MEAT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
 
+    <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 
 <!--

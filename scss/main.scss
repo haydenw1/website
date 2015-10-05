@@ -31,6 +31,7 @@ $gray: #424242;
 
 
 $break-mobile-small: 340px;
+$break-mobile-medium: 400px;
 $break-mobile-large: 500px;
 
 $break-small: 590px;
@@ -126,7 +127,7 @@ li {
   background-color: $orange;
   border-radius: 5px;
   color: #fff;
-  //cursor: pointer;
+  cursor: pointer;
   display: block;
     //font-size: 1.25em;
   font-weight: 600;
@@ -152,7 +153,24 @@ li {
     //left: calc(50% - 275px);
     width: 50%;
   }
+
+  &.contact-show {
+    @include span-columns(4 of 12);
+    margin-top: 0px;
+  }
+
+  &.contact-copy {
+    @include span-columns(8 of 12);
+    margin-top: 0px;
+    display: none;
+    margin-right: 0px;
+  }
 }
+
+#phone {
+  margin-top: 6em;
+}
+    
 
 
 //headings-----------------------------------------------------------------
@@ -205,7 +223,8 @@ li {
         text-align: left;
     font-size: 1.25em;
     font-weight: bold;
-    font-style: italic;
+    font-family: $font-lato-heavy;
+    //font-style: italic;
   }
 
   .m {
@@ -525,6 +544,8 @@ li {
       //margin-bottom: 1em;
       img {
         display: block;
+        border: 0px solid black;
+        border-radius: 0px;
       }
       //
       .slider-title,
@@ -544,6 +565,7 @@ li {
 
       .slider-title {
         //font-family: $font-raleway;
+        border-top: 5px solid $gray;
         font-weight: 600;
         font-size: 1.25em;
       }
@@ -634,7 +656,15 @@ p {
 
     &.passive {
       width: 20px;
+
+      @media screen and (max-width: $break-mobile-medium) {
+        display: none;
+      }
     }
+  }
+
+  &.front {
+    font-size: 20px;
   }
 
   &.heavy {
@@ -721,6 +751,59 @@ p {
   }
 }
 
+
+.tri-text-holder {
+  //background-color: #fff;
+  //margin: 2em 2.35765% 3em;
+  overflow: auto;
+  margin: 2em;
+}
+
+#tri-text {
+  @include span-columns(4 of 12);
+
+  background-color: rgba(0,0,0,.1);
+  border-radius: 15px;
+
+  ul {
+    padding: 0em 1em 0em 2em;
+
+    li {
+      font-weight: bold;
+    }
+  }
+
+  p {
+    //padding-left: 1em;
+  }
+
+  @media screen and (max-width: $break-medLarge) {
+    @include span-columns(10 of 12);
+
+    float: none;
+    margin: 0 auto ;
+    padding: 1px 0px 10px 0px;
+    margin: 25px auto;
+    margin-top: 0px;
+
+    &:last-child {
+      margin-right: auto;
+      margin-bottom: 0px;
+    }
+  }
+
+  @media screen and (max-width: $break-mobile-large) {
+    //@include span-columns(11 of 12);
+
+    //float: none;
+    //margin: 0 auto $header-height;
+  }
+}
+
+
+
+
+
 .skills {
   padding: 15px 0px 10px 0px;
   //margin: 0px;
@@ -743,6 +826,7 @@ p {
 .text-link {
   font-family: $font-lato-heavy;
   text-decoration: none;
+  color: $orange;
   //font-style: italic;
   //
   &:hover {
@@ -752,31 +836,81 @@ p {
 
 
 .nv {
+  color: #333;
+  cursor: pointer;
+  font-family: $font-raleway;
+  font-size: 18pt; //has to be in 'pt' because on inline fix
+  float: right;
+  margin: 0 0 0 4%;
 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none;
+    //padding: 11px 0px;
 
-      color: #333;
-      cursor: pointer;
-      font-family: $font-raleway;
-      font-size: 18pt; //has to be in 'pt' because on inline fix
-      float: right;
-      margin: 0 0 0 4%;
+  @media screen and (max-width: $break-medLarge) {
 
-      -webkit-user-select: none; /* Chrome/Safari */        
-      -moz-user-select: none; /* Firefox */
-      -ms-user-select: none;
-        //padding: 11px 0px;
+    display: none;
+  }
 
-        @media screen and (max-width: $break-medLarge) {
+  @media screen and (max-width: $break-large) {
+  font-size: 15pt; //has to be in 'pt' because on inline fix
+  margin: 3px 0 0 4%;
+  }
 
-          display: none;
-        }
+  &:hover {
+    color: rgb(4, 216, 238);
+  }
+}
 
-        @media screen and (max-width: $break-large) {
-        font-size: 15pt; //has to be in 'pt' because on inline fix
-        margin: 3px 0 0 4%;
-      }
+.contact-text {
+  padding: .5em;
+  //background-color: $orange;
+  border-radius: 5px;
+  border: 2px solid $gray;
+  color: $gray;
+  //cursor: pointer;
+  display: block;
+    //font-size: 1.25em;
+  font-weight: 600;
+  margin: 1.5em auto 1em;
+  text-align: center;
+  //text-decoration: none;
+  //width: 30%;
+}
 
-      &:hover {
-        color: rgb(4, 216, 238);
-      }
+img {
+  
+
+  .full {
+    @include span-columns(12 of 12);
+  }
+
+  &.three-quarter {
+    //@include span-columns(9 of 12);
+    width: 75%;
+    border: 2px solid #fff;
+    margin: 3em auto 1em;
+    border-radius: 15px;
+
+    @media screen and (max-width: $break-smallMed) {
+      width: 90%;
     }
+
+    @media screen and (max-width: $break-mobile-medium) {
+      width: 100%;
+    }
+  
+
+  display: block;
+  //width: 75%;
+
+    //margin: 0 auto;
+  }
+}
+
+.caption {
+  font-family: $font-lato-light;
+  margin: 1em 0em 3em;
+  text-align: center;
+}
