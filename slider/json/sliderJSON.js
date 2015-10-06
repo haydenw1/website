@@ -49,4 +49,22 @@ sliderJSON = {
     }
   ],
 
+  slider1:[
+    {
+      "desc":"JavaScript Slider",
+      "image":"slider_stock.jpg",
+      "title":"JavaScript Slider"
+    },
+    {
+      "desc":"JavaScript Slider",
+      "image":"slider_stock.jpg",
+      "title":"JavaScript Slider"
+    },
+    {
+      "desc":"JavaScript Slider",
+      "image":"slider_stock.jpg",
+      "title":"JavaScript Slider"
+    }
+  ],
+
 };

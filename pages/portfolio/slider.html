@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hayden Port</title>
+
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+    <!--<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" type="text/css" href="../../fonts/LatoLatinWeb/latolatinfonts.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="../../slider/css/main.css"/>
+
+    <script type="text/javascript" src="../../slider/json/sliderJSON.js"></script>
+    <script type="text/javascript" src="../../slider/slider.js"></script>
+
+    <script type="text/javascript">
+      new Slider("slider1");
+    </script>
+
+    <script>
+      (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = 'http://assets.gfycat.com/js/gfyajax-0.517d.js';
+        s.parentNode.insertBefore(g, s);
+      }(document, 'script'));
+    </script>
+
+  </head>
+  <body>
+    <!--%%%%%%%%%%%%%%%%%%%%%%%% NAVIGATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+      <div class="keep-nav">
+        <div class="nav">
+          <!--<div class="bar top"></div>-->
+            <div class="head nv link">contact</div>
+            <div class="head nv link">work</div>
+            <div class="head nv link">ideas</div>
+            <div class="head nv link">portfolio</div>
+            <div class="head nv link">about</div>
+          <div class="head nm link" id="name"><span class="light">HAYDEN</span> WAGNER</div>
+
+          <div class="menu">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               width="60.278px" height="24.734px" viewBox="0 0 60.278 24.734" enable-background="new 0 0 60.278 24.734" xml:space="preserve">
+            <g>
+              <g>
+                <path d="M3.191,15.12c18,0,36,0,54,0c3.225,0,3.225-5,0-5c-18,0-36,0-54,0C-0.033,10.12-0.033,15.12,3.191,15.12L3.191,15.12z"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M28.391,24.12c9.6,0,19.2,0,28.8,0c3.225,0,3.225-5,0-5c-9.6,0-19.2,0-28.8,0C25.167,19.12,25.167,24.12,28.391,24.12
+                  L28.391,24.12z"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M21.19,6.12c12,0,24,0,36,0c3.225,0,3.225-5,0-5c-12,0-24,0-36,0C17.966,1.12,17.966,6.12,21.19,6.12L21.19,6.12z"/>
+              </g>
+            </g>
+            </svg>
+          </div>
+      </div>
+    </div>
+    <!--%%%%%%%%%%%%%%%%%%%%%%%% NAVIGATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%    MEAT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+
+    <div class="container">
+
+      <div id="middle-text">
+
+          <img class="full" src=""/>
+
+          <h1 class="masthead">JavaScript Slider</h1>
+
+          <!--random slider w/ random pics-->
+          <!--desctription-->
+          <div id="slider1"></div>
+          <p class="caption">Random images in slider to show image cycling and navigation elements in action</p>
+
+
+          <h2 class="masthead sub1">Introduction</h2>
+
+          <p>There are many existing JavaScript image 'slider' platforms currently available on the internet; you can download and add them to your website with minimal tweaking and adjustments. <span class="bold italic">One of these sliders is called "Slick"&#8212;I really enjoy using this slider because of its many options and <a class="text-link" href="http://kenwheeler.github.io/slick/" target="_blank">great documentation.</a></span> Even though these better sliders already existed, I wanted to try to build my own JavaScript slider from scratch.</p>
+
+          <div id="single-text">
+            <p class="skills center heavy">SLIDER GOALS</p>
+            <ul>
+              <li>Familiarize myself with JavaScript constructor functions</li>
+              <li>Be able to create an image slider at a specific point in the DOM</li>
+              <li>Slider must have appropriate, working controls, and display image without distorting the dimenstions</li>
+              <li>Slider must cycle through all available images, match website style, and be responsive</li>
+            </ul>
+          </div>
+
+          <h2 class="masthead sub1">Approach</h2>
+          <h3 class="masthead sub2">CONSTRUCTOR FUNCTION AND ELEMENT CREATION</h3>
+
+          <p>I started learning enough about constructor functions to write a basic constructor that would be passed a string argument that corresponds to a "div" element's id attribute that was already (hardcoded) in the DOM.</p>
+
+          <p class="bold">The constructor function then searches the DOM for a div with an id that matches the argument it was passed, and creates and appends the structural and functional elements of the image slider to that div.</p>
+
+          <h2 class="masthead sub2">IMAGE AND DATA</h2>
+
+          <p>I understand and have worked with JSON before, so I chose to handle the image and text data by linking out to a JavaScript file that held a JSON object. <span class="bold">This JSON object ties the correct images and image titles to a constructed slider by looking for a property in the JSON object that matches the original constructor argument string.</span></p>
+
+          <p>If there is no property in the main JSON object to match the id value an error is thrown to the user. If the property does exist, the constructor moves on to fill its created elements with the images and text from the data file.</p>
+
+          <h2 class="masthead sub2">NAVIGATION ELEMENTS</h2>
+
+          <p>Arrow "SVGs" and "navigation" div elements are created to allow the user to cycle through the available images in the slider. <span class="heavy">The "navigation" divs surround the visual svg arrows, to afford the user a larger area to click or touch when cycling the slider.</span></p>
+
+          <img class="three-quarter stop550" src="assets/slider_stock_small_screenshot.jpg"/>
+          <p class="caption"><span class="note semibold">Static screenshot</span> of the slider, showing <span class="normal">image title</span> (top), <span class="normal">arrow with larger nav box</span> (right), and <span class="normal">position indicators</span> (bottom).</p>
+
+          <h2 class="masthead sub2">D3 ELEMENTS AND EFFECTS</h2>
+
+          <p>I included D3.js in this project to allow for aesthetically pleasing element sizing and positioning; I also wanted to use D3.js so I will be able to easily add transitions and effects to the image slider in the future (currently the images just switch to the next one immediately on slider cycle).</p>
+
+          <div id="dot-holder">
+          </div>
+
+          <p class="caption">An animation of the 'dot' style that tracks and shows the slider's position</p>
+
+          <h2 class="masthead sub1">Final Thoughts</h2>
+
+          <p>For an initial iteration of my own image slider, I think I ended up with a pretty good final project (considering that I had never written a constructor function before).</p>
+
+          <div id="single-text">
+            <p class="skills center heavy">FUTURE IMPROVEMENTS</p>
+            <ul>
+              <li>Add optional parameters in the constructor to allow choice of transition style</li>
+              <li>I kept having to pass a reference to the object currently being constructed to the functions within the constructor. Just using "this" wasn't working. Fix this issue.</li>
+              <li>Slight arrow change to something more subtle (maybe...something like <a class="text-link" href="https://www.flickr.com/photos/digimeister/21800448408/" target="_blank">Flickr uses</a>)</li>
+              <li>Add area to include description in addition to title (and ad property in JSON file)</li>
+            </ul>
+          </div>
+
+        <a class="button to-github">View this code on Github</a>
+         
+
+      </div>
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%   MEAT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%  FOOTER   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+      <div class="footer">
+      </div>
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%  FOOTER   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+  </body>
+  <script>
+    dots = {
+      data: [1,2,3,4],
+      counter: 0,
+
+      make: function() {
+        var svg = d3.select("#dot-holder").append("svg");
+        var g = svg.append("g");
+
+        g.selectAll("circle-d")
+          .data(dots.data)
+          .enter()
+          .append("circle")
+            .attr("class","test-circles")
+            .attr("cy", 40)
+            .attr("cx", function(d,i) {
+              return 40 * (i + 1);
+            })
+            .attr("r", function(d,i) {
+              if (i == dots.counter) {
+                return 10;
+              }
+              return 7.5;
+            })
+            .attr("fill", function(d,i) {
+              if (i == dots.counter) {
+                console.log(dots.counter);
+                return "rgb(4, 216, 238)";
+              }
+              return "#fff";
+            });
+        dots.counter++;
+
+        setInterval( function(){
+          dots.change();
+        }, 1000);
+      },
+
+      change: function() {
+        d3.selectAll(".test-circles")
+          .transition().duration(500)
+            .attr("r", function(d,i) {
+              if (i == dots.counter) {
+                return 10;
+              }
+              return 7.5;
+            })
+            .attr("fill", function(d,i) {
+              if (i == dots.counter) {
+                console.log(dots.counter);
+                return "rgb(4, 216, 238)";
+              }
+              return "#fff";
+            });
+      
+        if (dots.counter < dots.data.length -1) {
+          dots.counter++;
+        } else {
+          dots.counter = 0;
+        }
+      }
+    }
+
+    dots.make();
+  </script>
+</html>
+
