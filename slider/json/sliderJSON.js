@@ -1,20 +1,15 @@
 sliderJSON = {
 
-  test:[
+  index_port:[
     {
-      "desc":"Showcase app, built with Adobe DPS",
-      "image":"port1.jpg",
+      "desc":"",
+      "image":"slider/index/index_port1.jpg",
       "title":"RIT Media Sciences App"
     },
     {
-      "desc":"This is the second test decription text.",
-      "image":"test2.jpg",
-      "title":"Test Project 2"
-    },
-    {
-      "desc":"This is the third test decription text.",
-      "image":"test3.jpg",
-      "title":"Test Project 3"
+      "desc":"",
+      "image":"slider/index/index_port2.jpg",
+      "title":"Silver Wings T-Shirt Design"
     }
   ],
 

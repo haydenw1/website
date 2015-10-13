@@ -182,22 +182,23 @@ function addElements(obj) {
   var contentDiv = obj.contentDiv = document.createElement("div");
   var sliderImage = obj.sliderImage = document.createElement("img");
   //var sliderTitleShadow = obj.sliderTitleShadow = document.createElement("div");
-  //var sliderDescShadow = obj.sliderDescShadow = document.createElement("div");
+  var sliderDescShadow = obj.sliderDescShadow = document.createElement("div");
   var sliderTitle = obj.sliderTitle = document.createElement("p");
   var sliderDesc = obj.sliderDesc = document.createElement("p");
 
   contentDiv.setAttribute("class","content " + obj.id);  //adding the object id allows differentation between multiple sliders
   sliderImage.setAttribute("class","slider-image");
   //sliderTitleShadow.setAttribute("class","slider-title-shadow");
-  //sliderDescShadow.setAttribute("class","slider-desc-shadow");
+  sliderDescShadow.setAttribute("class","slider-desc-shadow");
   sliderTitle.setAttribute("class","slider-title");
   sliderDesc.setAttribute("class","slider-desc");
 
   //append the image, text shadow, and text to the content div
   //contentDiv.appendChild(sliderTitleShadow);
+  contentDiv.appendChild(sliderDescShadow);
   contentDiv.appendChild(sliderTitle);
   //contentDiv.appendChild(sliderImage);
-  //contentDiv.appendChild(sliderDesc);
+  //contentDiv.appendChild(sliderDesc); //CHANGE TO INCLUDE DESCRIPTION
 
   obj.holderDiv.appendChild(contentDiv);  //append the new content div to the holder div
 }

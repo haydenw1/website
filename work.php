@@ -1,104 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hayden Port</title>
-
-    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 
-    <!--<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>-->
-    <link rel="stylesheet" type="text/css" href="fonts/LatoLatinWeb/latolatinfonts.css"/>
-    <!--<link rel="stylesheet" type="text/css" href="fonts/raleway/Raleway-Regular.ttf"/>-->
-    <link rel="stylesheet" type="text/css" href="http://www.haydenwagner.com/css/main.css"/>
-    <link rel="stylesheet" type="text/css" href="http://www.haydenwagner.com/slider/css/main.css"/>
-
-    <script type="text/javascript" src="http://www.haydenwagner.com/slider/json/sliderJSON.js"></script>
-    <script type="text/javascript" src="http://www.haydenwagner.com/slider/slider.js"></script>
-    <script type="text/javascript" src="http://www.haydenwagner.com/js/main.js"></script>
-
-    <script type="text/javascript">
-      //new Slider("test");
-      //new Slider("test1");
-    </script>
+  <!--%%%%%%%%%%%%%%%%%%%%%%%%    HEADER   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+  <?php include "php_includes/header.php"; ?>
+  <!--%%%%%%%%%%%%%%%%%%%%%%%%    HEADER   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
 
-  </head>
   <body>
-    <!--%%%%%%%%%%%%%%%%%%%%%%%% NAVIGATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-      <div class="keep-nav">
-        <div class="nav">
-          <!--<div class="bar top"></div>-->
-          <div class="nv-holder" id="popup">
-            <a href="http://www.haydenwagner.com/about.html"><div class="head na link">about</div></a>
-            <a href="http://www.haydenwagner.com/portfolio.html"><div class="head na link">portfolio</div></a>
-            <a href="http://www.haydenwagner.com/ideas.html"><div class="head na link">ideas</div></a>
-            <a href="http://www.haydenwagner.com/work.html"><div class="head na link">work</div></a>
-            <a href="http://www.haydenwagner.com/contact.html"><div class="head na link">contact</div></a>
-          </div>
 
 
-          <!--<div class="nv-holder" id="popup">-->
-            <a href="http://www.haydenwagner.com/contact.html"><div class="head nv link">contact</div></a>
-            <a href="http://www.haydenwagner.com/work.html"><div class="head nv link">work</div></a>
-            <a href="http://www.haydenwagner.com/ideas.html"><div class="head nv link">ideas</div></a>
-            <a href="http://www.haydenwagner.com/portfolio.html"><div class="head nv link">portfolio</div></a>
-            <a href="http://www.haydenwagner.com/about.html"><div class="head nv link">about</div></a>
-          <!--</div>-->
-          
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%    NAV    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+    <?php include "php_includes/nav.php"; ?>
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%    NAV    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
-          <a href="http://www.haydenwagner.com">
-            <div class="head nm link" id="name">
 
-                <?xml version="1.0" encoding="utf-8"?>
-                  <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="72px" height="72px" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
-                  <polygon fill="#4AC5DE" stroke="#4AC5DE" stroke-miterlimit="10" points="12.117,50.171 31.446,30.842 52.084,34.364 57.989,43.315 
-                    55.032,54.512 67.68,44.817 64.205,23.144 66.662,9.139 50.938,21.178 31.937,16.1 24.73,18.966 21.7,3.078 10.479,22.324 
-                    13.673,33.381 "/>
-                  <rect x="26.528" y="40.179" fill="#4AC5DE" width="7.617" height="10.237"/>
-                  <rect x="39.469" y="40.179" fill="#4AC5DE" width="7.617" height="10.237"/>
-                  </svg>
-
-              <span class="light-name">HAYDEN</span> WAGNER
-            </div>
-          </a>
-
-          <div class="menu" id="menu">
-            <?xml version="1.0" encoding="utf-8"?>
-            <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-               width="60.278px" height="24.734px" viewBox="0 0 60.278 24.734" enable-background="new 0 0 60.278 24.734" xml:space="preserve">
-            <g>
-              <g>
-                <path d="M3.191,15.12c18,0,36,0,54,0c3.225,0,3.225-5,0-5c-18,0-36,0-54,0C-0.033,10.12-0.033,15.12,3.191,15.12L3.191,15.12z"/>
-              </g>
-            </g>
-            <g>
-              <g>
-                <path d="M28.391,24.12c9.6,0,19.2,0,28.8,0c3.225,0,3.225-5,0-5c-9.6,0-19.2,0-28.8,0C25.167,19.12,25.167,24.12,28.391,24.12
-                  L28.391,24.12z"/>
-              </g>
-            </g>
-            <g>
-              <g>
-                <path d="M21.19,6.12c12,0,24,0,36,0c3.225,0,3.225-5,0-5c-12,0-24,0-36,0C17.966,1.12,17.966,6.12,21.19,6.12L21.19,6.12z"/>
-              </g>
-            </g>
-            </svg>
-          </div>
-      </div>
-    </div>
-    <!--%%%%%%%%%%%%%%%%%%%%%%%% NAVIGATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
-<!--%%%%%%%%%%%%%%%%%%%%%%%%    MEAT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%    MEAT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
     <div class="container">
 
       <div id="middle-text">
@@ -237,17 +154,17 @@
 
           <!--<p>Skills Developed</p>
           <p>Independent Work Ethic, Customer Service, Equipment Operation and Repair, Welding and Fabricating</p>-->
+      </div>
+      <div id="middle-text"></div>
+    </div>
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%   MEAT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
-      </div>
-      <div id="middle-text">
-      </div>
-  </div>
-<!--%%%%%%%%%%%%%%%%%%%%%%%%   MEAT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
     <!--%%%%%%%%%%%%%%%%%%%%%%%%  FOOTER   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-      <div class="footer">
-      </div>
+    <?php include "php_includes/footer.php" ?>
     <!--%%%%%%%%%%%%%%%%%%%%%%%%  FOOTER   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
 
   </body>
 </html>
+

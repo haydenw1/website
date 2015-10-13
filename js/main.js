@@ -1,3 +1,16 @@
+$( document ).ready(function(){
+  //searches every <p> tag to find the last space between words with a regex, and
+  //adds a non-breaking space there
+  //*src: http://www.webdevdoor.com/jquery/preventing-widows-websites-jquery/
+  $('p').each(function(){
+      var string = $(this).html();
+      string = string.replace(/ ([^ ]*)$/,'&nbsp;$1');
+      $(this).html(string);
+  });
+  console.log("orphan run");
+});
+
+
 var popdown = {
   visible: false,
 
@@ -46,7 +59,7 @@ var popdown = {
 var squadUp = {
   denzel: "hb",
   daniel: "55@ri",
-  tom: "w6",
+  tom: "w69",
   jamie: "t.edu",
 
   foxx: "07) ",
@@ -67,7 +80,7 @@ var squadUp = {
 
       d3.select(squadUp.copyEmail)
         .on("click", function() {
-          
+
           //  src: http://stackoverflow.com/questions/985272/selecting-text-in-an-element-akin-to-highlighting-with-your-mouse
           SelectText("email")
 
@@ -78,6 +91,17 @@ var squadUp = {
             console.log('Copying text command was ' + msg);
           } catch (err) {
             console.log('Oops, unable to copy');
+          }
+
+          d3.select(squadUp.showEmail)
+            .html("COPIED!")
+            .style("color", "#dd0055")
+            .style("background-color", "#fff");
+
+          if (squadUp.phone == true) {
+            d3.select(squadUp.showPhone)
+              .html("&nbsp;")
+              .style("background-color", "#424242");
           }
         })
         .style("display","block")
@@ -97,10 +121,10 @@ var squadUp = {
 
       d3.select(squadUp.copyPhone)
         .on("click", function() {
-          
+
           //  src: http://stackoverflow.com/questions/985272/selecting-text-in-an-element-akin-to-highlighting-with-your-mouse
           SelectText("phone")
-          
+
           // src: http://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
           try {
             var successful = document.execCommand('copy');
@@ -109,6 +133,19 @@ var squadUp = {
           } catch (err) {
             console.log('Oops, unable to copy');
           }
+
+          d3.select(squadUp.showPhone)
+            .html("COPIED!")
+            .style("color", "#dd0055")
+            .style("background-color", "#fff");
+
+          if (squadUp.email == true) {
+            d3.select(squadUp.showEmail)
+              .html("&nbsp;")
+              .style("background-color", "#424242");
+          }
+            //.style("color", "#dd0055")
+            //.style("background-color", "#fff");
         })
         .style("display","block")
         .transition()
@@ -175,6 +212,8 @@ $( document ).ready(function(){
       }
     });
 
+
+  //gives nav bar shadow on scroll down page
   $( window ).scroll(function() {
     if( $( window ).scrollTop() > 0 && window.outerWidth > 850) {
       d3.select(".keep-nav")
@@ -198,13 +237,13 @@ function SelectText(element) {
     var doc = document
         , text = doc.getElementById(element)
         , range, selection
-    ;    
+    ;
     if (doc.body.createTextRange) {
         range = document.body.createTextRange();
         range.moveToElementText(text);
         range.select();
     } else if (window.getSelection) {
-        selection = window.getSelection();        
+        selection = window.getSelection();
         range = document.createRange();
         range.selectNodeContents(text);
         selection.removeAllRanges();

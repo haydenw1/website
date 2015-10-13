@@ -30,6 +30,8 @@ $orange: rgb(238, 103, 4);
 $blue: rgb(4, 216, 238);
 $gray: #424242;
 
+$blurb-color: rgba(1, 146, 161, .3);
+
 
 $break-mobile-small: 340px;
 $break-mobile-medium: 400px;
@@ -50,6 +52,7 @@ html,body{
 
 body {
   background: #f7f7f5;
+  padding: 50px 0px 0px 0px;
 }
 
 p,
@@ -94,13 +97,16 @@ li {
 }
 
 #middle-text {
-  @include span-columns(9 of 12);
+  @include span-columns(10 of 12);
 
   float: none;
-  margin: 0 auto 75px;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 2% 3%;
+  //background-color: rgba(255,255,255,.85);
 
   &.above-slider {
-    margin: 0 auto 30px;
+    margin: 0 auto 0px;
   }
 
   &.below-slider {
@@ -108,7 +114,7 @@ li {
   }
 
   &.first-blurb {
-    margin: 50px auto 75px;
+    //margin: 50px auto 75px;
   }
 
   p {
@@ -128,21 +134,25 @@ li {
     float: none;
     margin: 0 auto $header-height;
   }
+
+
+  &:last-child {
+    margin: 0 auto;
+  }
 }
 
 .button {
   //@include button;
+  box-shadow: 0px 3px 6px rgba(0,0,0,.1);
 
-  color: #424242;
   font-family: $font-lato;
   font-size: 18px;
   line-height: 1.69;
   margin-top: 10px;
   margin-bottom: 20px;
-  /////
 
   padding: .5em;
-  background-color: $orange;
+  background-color: $gray;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
@@ -155,7 +165,7 @@ li {
   width: 30%;
 
   &:hover {
-    background: #FF9446;
+    background: #606060;
   }
 
   &.below-slider {
@@ -171,17 +181,20 @@ li {
     //left: calc(50% - 275px);
     width: 50%;
   }
-
+/*
   &.contact-show {
     @include span-columns(4 of 12);
     margin-top: 0px;
-  }
+  }*/
 
   &.contact-copy {
-    @include span-columns(8 of 12);
+    //@include span-columns(8 of 12);
+    //width: 66%;
+    //float: none;
     margin-top: 0px;
     display: none;
-    margin-right: 0px;
+    //margin-right: auto;
+    //margin-left: auto;
   }
 
   &.to-github {
@@ -196,9 +209,9 @@ li {
 }
 
 #phone {
-  margin-top: 6em;
+  //margin-top: 6em;
 }
-    
+
 
 
 //headings-----------------------------------------------------------------
@@ -218,7 +231,7 @@ li {
     right: .5em;
     width: calc(100% + .5em);
     position: relative;
-    background-color: white;
+    background-color: #fff;
   }
 
   @media screen and (max-width: $break-mobile-small) {
@@ -234,6 +247,7 @@ li {
   &.sub1 {
     font-family: $font-lato;
     font-size: 1.75em;
+    line-height: 1.3;
     color: #333;
     font-weight: 500;
     //border-bottom: 1px solid #666;
@@ -265,6 +279,7 @@ li {
 }
 
 .keep-nav {
+  //background: url("../assets/flickr_landscape_top.jpg");
   background: #fff;
   height: $header-height;
   width: 100%;
@@ -301,7 +316,7 @@ li {
     float: left;
     margin: 0;
 
-    -webkit-user-select: none; /* Chrome/Safari */        
+    -webkit-user-select: none; /* Chrome/Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none;
 
@@ -320,6 +335,16 @@ li {
 
     &:hover {
       color: rgb(4, 216, 238);
+      //color: #fff;
+
+      #Layer_1 {
+        polygon,
+        rect {
+          //fill: #fff;
+          //stroke: #fff;
+        }
+        //fill: #fff;
+      }
     }
 
     @media screen and (max-width: $break-large) {
@@ -363,7 +388,7 @@ li {
       box-shadow: 0px 30px 40px rgba(0,0,0,.3);
       display: block;
     }
-    
+
 
     @media screen and (max-width: $break-medium) {
       display: block;
@@ -378,12 +403,12 @@ li {
       top: 44px;
     }
 
-    
+
 
 
 
     .na {
-      
+
       color: #333;
       cursor: pointer;
       font-family: $font-raleway;
@@ -391,13 +416,14 @@ li {
       float: right;
       margin: 0 0 0 4%;
 
-      -webkit-user-select: none; /* Chrome/Safari */        
+      -webkit-user-select: none; /* Chrome/Safari */
       -moz-user-select: none; /* Firefox */
       -ms-user-select: none;
         //padding: 11px 0px;
 
      &:hover {
       color: rgb(4, 216, 238);
+      //color: #fff;
       }
 
       @media screen and (max-width: $break-large) {
@@ -544,7 +570,7 @@ li {
 
 .slider {
   margin: 3em 0;
-  max-width: 715px;
+  max-width: 720px;
   margin: 0 auto;
 
   .s-holder {
@@ -596,6 +622,8 @@ li {
       //max-width: 700px;
       //margin: 0 auto;
       //margin-bottom: 1em;
+      box-shadow: inset 0px -75px 175px -35px rgba(0,0,0,0.75);
+
       img {
         display: block;
         border: 0px solid black;
@@ -604,12 +632,12 @@ li {
       //
       .slider-title,
       .slider-desc {
-        background-color: #ddd;
+        background-color: #424242;
         padding-left: 10%;
         padding-right: 10%;
         width: 100%;
-        color: #424242;
-        font-family: $font-lato-semibold;
+        color: #fff;
+        font-family: $font-lato;
 
         @media screen and (max-width: $break-large) {
           padding-left: 11%;
@@ -619,13 +647,25 @@ li {
 
       .slider-title {
         //font-family: $font-raleway;
-        border-top: 5px solid $gray;
+        //border-top: 5px solid $gray;
         font-weight: 600;
         font-size: 1.25em;
       }
 
       .slider-desc {
         font-family: $font-lato;
+      }
+
+      .slider-desc-shadow {
+        position: absolute;
+        bottom: 0;
+        height: 25%;
+        width: 100%;
+        box-shadow: inset 0px -80px 50px -50px #3c3c3c;
+
+        @media screen and (max-width: $break-mobile-large) {
+          box-shadow: inset 0px -65px 50px -50px #3c3c3c;
+        }
       }
     }
   }
@@ -723,6 +763,7 @@ p {
 
   &.front {
     font-size: 20px;
+
   }
 
   &.heavy {
@@ -860,7 +901,7 @@ p {
 }
 
 #single-text {
-  
+
   @include span-columns(9 of 12);
   overflow: auto;
   margin: 2em auto 3em;
@@ -940,7 +981,7 @@ p {
 .skills {
   padding: 15px 0px 10px 0px;
   //margin: 0px;
-  background-color: $orange;
+  background-color: #468BAB;//like this blue...got to look at a litte more
   color: white;
   line-height: 1;
   margin: 15px 0px 0px;
@@ -953,7 +994,7 @@ p {
   font-size: 1.5em;
 
   //color: $orange;
-      text-shadow: 1px 1px 1px rgba(0,0,0,.15);
+  //text-shadow: 1px 1px 1px rgba(0,0,0,.15);
 }
 
 .text-link {
@@ -978,7 +1019,7 @@ p {
   top: 1px;
   position: relative;
 
-  -webkit-user-select: none; /* Chrome/Safari */        
+  -webkit-user-select: none; /* Chrome/Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none;
     //padding: 11px 0px;
@@ -995,6 +1036,7 @@ p {
 
   &:hover {
     color: rgb(4, 216, 238);
+    //color: #fff;
   }
 }
 
@@ -1015,7 +1057,7 @@ p {
 }
 
 img {
-  
+
 
   .full {
     @include span-columns(12 of 12);
@@ -1039,7 +1081,7 @@ img {
     &.stop550 {
       max-width: 550px;
     }
-  
+
 
   display: block;
   //width: 75%;
@@ -1062,3 +1104,180 @@ img {
     width: 90%;
   }
 }
+
+
+.blocker {
+  padding: 1em;
+  border-radius: 15px;
+  border: 2px solid $gray;
+  background: #fff;
+  margin: 0 auto 3em !important;
+}
+
+.above-blocker {
+  margin: 0 auto 3em !important;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  //margin-top: 50px;
+  height: 75px;
+  background-color: #424242;
+  //background: url("../assets/flickr_landscape_bottom.jpg");
+
+  svg {
+    top: 12px;
+    fill: white;
+    height: 75%;
+  }
+
+  #Layer_1 {
+        fill: rgb(4, 216, 238);
+      }
+}
+.below-contact {
+  height: 50px !important;
+}
+
+
+
+.backing {
+  //padding: 50px 0px;
+}
+
+#index {
+
+  &-blurb-color {
+    //background-color: $blurb-color;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,4ce1f1+0,ffffff+80 */
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1e5799 0%, #4ce1f1 0%, #ffffff 80%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(0%,#4ce1f1), color-stop(80%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#4ce1f1 0%,#ffffff 80%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #1e5799 0%,#4ce1f1 0%,#ffffff 80%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #1e5799 0%,#4ce1f1 0%,#ffffff 80%); /* IE10+ */
+    background: linear-gradient(to bottom,  #1e5799 0%,#4ce1f1 0%,#ffffff 80%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  }
+
+  &-blurb {
+    background: url("../assets/white_sand_35.png");
+  }
+
+  &-about-color {
+    background-color: rgba(187, 43, 22, 1);
+
+    h2,
+    p {
+      color: #fff;
+      //text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+    }
+
+    .button {
+      background: #424242;
+
+      &:hover {
+        background: #606060;
+      }
+    }
+  }
+
+  &-about {
+    background: url("../assets/white_carbon_20.png");
+  }
+
+  &-portfolio-color {
+    background-color: rgba(8, 247, 136, .75);
+
+    h2,
+    p {
+    //color: #fff;
+    //text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+    }
+
+    //.button {
+      //background: #424242;
+    //}
+  }
+
+  &-portfolio {
+    background: url("../assets/gplaypattern_25.png");
+    padding-bottom: calc(20px + 2%);
+  }
+
+  &-ideas-color {
+    background-color: rgba(57, 87, 136, 1);
+
+    h2,
+    p {
+      color: #fff;
+      //text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+    }
+
+  //.button {
+    //background: #424242;
+  //}
+  }
+
+  &-ideas {
+    background: url("../assets/confectionary_35.png");
+  }
+
+  &-work-color {
+    background-color: rgba(240, 113, 64, .75);
+
+    h2,
+    p {
+      //color: #fff;
+      //text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+    }
+
+    .button {
+      background: #424242;
+
+      &:hover {
+        background: #606060;
+      }
+    }
+  }
+
+  &-work {
+    background: url("../assets/small_steps_10.png");
+  }
+
+  &-contact-color {
+    //background-color: rgba(241, 28, 146, .75);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+20,4ce1f1+100,4ce1f1+100,1e5799+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 20%, #4ce1f1 100%, #4ce1f1 100%, #1e5799 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,#ffffff), color-stop(100%,#4ce1f1), color-stop(100%,#4ce1f1), color-stop(100%,#1e5799)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 20%,#4ce1f1 100%,#4ce1f1 100%,#1e5799 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 20%,#4ce1f1 100%,#4ce1f1 100%,#1e5799 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 20%,#4ce1f1 100%,#4ce1f1 100%,#1e5799 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 20%,#4ce1f1 100%,#4ce1f1 100%,#1e5799 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+
+    h2,
+    p {
+      //color: #fff;
+      //text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+    }
+
+    .button {
+      background: #424242;
+
+      &:hover {
+        background: #606060;
+      }
+    }
+  }
+
+  &-contact {
+    background: url("../assets/halftone_30.png");
+    padding-bottom: calc(20px + 2%);
+  }
+}
+
+
