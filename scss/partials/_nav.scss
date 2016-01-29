@@ -1,0 +1,254 @@
+//nav--------------------
+$font-raleway: 'Raleway', sans-serif;
+$gray: #424242;
+$orange: rgb(238, 103, 4);
+$blue: rgb(4, 216, 238);
+$header-height: 7.5%;
+$small-screen:  481px;
+$medium-screen: 600px;
+$large-screen:  1201px;
+
+.keep-nav {
+  //background: url("../assets/flickr_landscape_top.jpg");
+  background: #fff;
+  height: $header-height;
+  width: 100%;
+
+  @media screen and (max-width: $small-screen) {
+    //height: 44px;
+  }
+
+  @media screen and (max-width: $medium-screen) {
+    background-color: #424242;
+  }
+}
+
+.nav {
+  font-size: 0; //to fix inline-block space problems of children
+  margin: 0 auto;
+  height: 100%;
+  z-index: 3;
+
+
+  .nm {
+    color: #333;
+    cursor: pointer;
+    font-family: $font-raleway;
+    display: inline-block;
+    font-size: 22pt;
+    font-weight: 700;
+    float: left;
+    margin: 0;
+
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none;
+
+    svg {
+      float: left;
+      position: relative;
+      height: 50px;
+      width: auto;
+      top: -8px;
+      padding-right: 10px;
+    }
+
+    &:hover {
+      color: rgb(4, 216, 238);
+      //color: #fff;
+
+      #Layer_1 {
+        polygon,
+        rect {
+          //fill: #fff;
+          //stroke: #fff;
+        }
+      }
+    }
+
+    @media screen and (max-width: $large-screen) {
+      font-size: 20pt;
+      font-weight: 700;
+      top: 1px;
+      position: relative;
+    }
+
+    @media screen and (max-width: $small-screen) {
+      font-size: 18pt;
+      span {
+        color: $blue;
+      }
+    }
+
+    @media screen and (max-width: $medium-screen) {
+      color: #fff;
+      &:hover {
+        color: rgb(4, 216, 238);
+      }
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+  }
+
+  .nv-holder {
+    display: none;
+
+    @media screen and (max-width: $medium-screen) {
+      position: fixed;
+      background-color: #fff;
+      box-shadow: 0px 20px 50px rgba(0,0,0,.3);
+      display: block;
+      height: 0;
+      overflow: hidden;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    @media screen and (max-width: $small-screen) {
+      //top: 44px;
+    }
+
+
+
+
+
+    .na {
+      color: #000;
+      cursor: pointer;
+      font-family: $font-raleway;
+      font-size: 18pt; //has to be in 'pt' because on inline fix
+      float: right;
+      margin: 0 0 0 4%;
+
+      -webkit-user-select: none; /* Chrome/Safari */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none;
+        //padding: 11px 0px;
+
+     &:hover {
+      color: rgb(4, 216, 238);
+      //color: #fff;
+      }
+
+      @media screen and (max-width: $large-screen) {
+        font-size: 15pt; //has to be in 'pt' because on inline fix
+        margin: 3px 0 0 4%;
+      }
+
+      @media screen and (max-width: $medium-screen) {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: #000;
+        padding: 20px 30px;
+        margin: 0;
+        float: none;
+
+        &:hover {
+          color: $blue;
+        }
+
+        &:active {
+          color: $gray;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  .menu{
+    display: none;
+    float: right;
+    position: relative;
+    &:hover{
+      #Layer_1 {
+        //fill: rgb(4, 216, 238);
+      }
+    }
+
+    @media screen and (max-width: $medium-screen) {
+      display: block;
+    }
+
+    @media screen and (max-width: $small-screen) {
+    }
+
+    #Layer_1 {
+      fill: white;
+      position: relative;
+      height: 20px;
+      width: auto;
+
+      @media screen and (max-width: $small-screen) {
+        height: 18px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $large-screen) {
+  }
+
+  @media screen and (max-width: $medium-screen) {
+  }
+
+}
+
+.name-link_holder{
+  height: 100%;
+  display: block;
+  width: 72.5%;
+  float: left;
+  margin-left: 2.5%;
+}
+
+.menu_holder {
+  height: 100%;
+  width: 22.5%;
+  float: right;
+  margin-right: 2.5%;
+}
+
+
+.nv-holder {
+    display: block;
+    z-index: 100;
+    top: 7.5%;
+    width: 100%;
+}
+
+.nv {
+  color: #333;
+  cursor: pointer;
+  font-family: $font-raleway;
+  font-size: 18pt; //has to be in 'pt' because on inline fix
+  float: right;
+  margin: 0 0 0 4%;
+  top: 1px;
+  position: relative;
+
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none;
+    //padding: 11px 0px;
+
+  @media screen and (max-width: $medium-screen) {
+
+    display: none;
+  }
+
+  @media screen and (max-width: $large-screen) {
+  font-size: 15pt; //has to be in 'pt' because on inline fix
+  margin: 3px 0 0 4%;
+  }
+
+  &:hover {
+    color: rgb(4, 216, 238);
+    //color: #fff;
+  }
+}

@@ -1,0 +1,17 @@
+.swipeSlider {
+
+  &_swipe-div {
+    width: 100%;
+    overflow: hidden;
+    height: 120px;
+  }
+
+  &_image-div {
+   //padding-left: 10%;
+   height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+}

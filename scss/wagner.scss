@@ -1,0 +1,317 @@
+@import 'partials/reset';
+@import 'partials/fonts';
+
+html, body {
+  min-height: 100%;
+  color: white;
+  height: 100%;
+}
+
+.description,
+.title,
+.date,
+p,
+.button {
+  font-family: lato;
+}
+
+a {
+  &.display {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: merriweather;
+  color: #303030;
+}
+
+h1 {
+
+}
+
+h2 {
+  font-size: 20px;
+  font-family: merriweather;
+  font-weight: 600;
+
+  &.contact {
+    margin: 15px 0;
+  }
+}
+
+.header {
+  height: 10%;
+  background: #424242;
+  margin: 0px;
+}
+
+.container {
+  height: 92.5%;
+
+  &_section {
+    height: auto;
+    //background-color: #DDD;
+
+    &:after {
+      content:"";
+      display:table;
+      clear:both;
+    }
+  }
+
+  &_below-header {
+    padding: 0px 5%;
+  }
+}
+
+.front {
+  position: relative;
+
+  &_about {
+    height: 25%;
+    background: #bb2b16;
+  }
+
+  &_projects {
+    height: 50%;
+    background: #4AC5DE;
+  }
+
+  &_contact {
+    height: 25%;
+    background: #0BA389;
+  }
+
+}
+
+
+
+.section {
+  //height: 10%;
+  padding: 15px;
+  //width: 100%;
+
+  &_projects {
+    background: #4AC5DE;
+  }
+
+  &_contact {
+    background: #0BA389;
+  }
+
+  &_about {
+    background: #bb2b16;
+  }
+}
+
+.description {
+  font-family: lato;
+
+  &--section-top {
+    font-style: italic;
+    line-height: 1.2;
+    margin: 0px;
+    color: white;
+  }
+}
+
+.project-card {
+  margin: 3.5% 3%;
+  box-shadow: 0px 2px 6px rgba(0,0,0,.5);
+  padding-bottom: 2px;
+  background-color: #FFF;
+}
+
+.image {
+
+  &_project {
+    width: 100%;
+
+    //temporary for testing
+    height: 140px;
+    //temporary for testing
+  }
+}
+
+.title {
+
+  &_project {
+    color: #606060;
+    font-weight: 700;
+    line-height: 1;
+    margin: 3px 5px 0px 5px;
+  }
+}
+
+.date {
+
+  &_project {
+    color: #909090;
+    font-style: italic;
+    font-size: 14px;
+    margin: 0px 0px 0px 5px;
+  }
+}
+
+p {
+
+  line-height: 1.6;
+  margin: 10px 0px;
+  color: #303030;
+
+  &.email-address {
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #424242;
+    color: #424242;
+    display: block;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+    text-align: center;
+
+    width: 50%;
+    float: left;
+
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  &.email-field-label {
+
+
+    &--left {
+      float: left;
+    }
+  }
+}
+
+.button {
+  border: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+  padding: .5em;
+  background-color: #424242;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 24px auto 16px;
+  text-align: center;
+  text-decoration: none;
+  width: 30%;
+
+  &--email-copy {
+    display: block;
+    color: rgb(255, 255, 255);
+    background-color: #0BA389;
+    float: right;
+    margin: 0 0 25px 0;
+
+    &-successful {
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+      float: right;
+      color: #0BA389;
+      background: white;
+      margin: 0 0 25px 0;
+    }
+  }
+
+  &--email-send {
+    display: block;
+    position: relative;
+    color: rgb(255, 255, 255);
+    background-color: #0BA389;
+    width: 75%;
+    margin-top: 10px;
+  }
+}
+
+label {
+  &.email {
+    //float: left;
+   //clear: both;
+   font-family: lato;
+    font-weight: 600;
+    margin: 2px 0px;
+    display: block;
+    color: #303030;
+    font-size: 18px;
+  }
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  border: 2px solid #424242;
+  height: 30px;
+  width: calc(100% - 14px);
+  padding: 0px 5px;
+  margin-bottom: 10px;
+  font-family: lato;
+  font-size: 16px;
+  font-weight: 600;
+  //margin: 0px 5%;
+
+  &.email {
+    //float: left;
+    //clear: left;
+  }
+}
+
+textarea {
+  border-radius: 5px;
+  border: none;
+  border: 2px solid #424242;
+  height: 90px;
+  padding: 5px;
+  width: calc(100% - 14px);
+  max-width: 100%;
+  font-family: lato;
+  font-size: 16px;
+  //transition: height .5s;
+  //margin: 0px 10%;
+
+  &.email {
+    //float: left;
+    //clear: left;
+  }
+}
+
+
+
+
+.display {
+  font-size: 35px;
+  font-family: Merriweather;
+  margin: 0px;
+  line-height: 1;
+  color: white;
+  text-decoration: none;
+
+  &--front {
+    text-align: center;
+    //height: 100%;
+    font-family: Raleway;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+  }
+
+  &--section {
+    margin-bottom: 10px;
+
+    &--about {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+
+@import 'partials/nav';
+@import 'partials/swipeSlider';

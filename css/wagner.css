@@ -1,0 +1,457 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway-Regular.ttf") format("truetype");
+  /* IE6-IE8 */ }
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/merriweather-light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/merriweather-light-italic.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/merriweather-regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/merriweather-italic.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/merriweather-bold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/merriweather-bold-italic.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/LatoLatin-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/LatoLatin-Italic.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/LatoLatin-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/LatoLatin-BoldItalic.ttf") format("truetype"); }
+html, body {
+  min-height: 100%;
+  color: white;
+  height: 100%; }
+
+.description,
+.title,
+.date,
+p,
+.button {
+  font-family: lato; }
+
+a.display {
+  text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: merriweather;
+  color: #303030; }
+
+h2 {
+  font-size: 20px;
+  font-family: merriweather;
+  font-weight: 600; }
+  h2.contact {
+    margin: 15px 0; }
+
+.header {
+  height: 10%;
+  background: #424242;
+  margin: 0px; }
+
+.container {
+  height: 92.5%; }
+  .container_section {
+    height: auto; }
+    .container_section:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .container_below-header {
+    padding: 0px 5%; }
+
+.front {
+  position: relative; }
+  .front_about {
+    height: 25%;
+    background: #bb2b16; }
+  .front_projects {
+    height: 50%;
+    background: #4AC5DE; }
+  .front_contact {
+    height: 25%;
+    background: #0BA389; }
+
+.section {
+  padding: 15px; }
+  .section_projects {
+    background: #4AC5DE; }
+  .section_contact {
+    background: #0BA389; }
+  .section_about {
+    background: #bb2b16; }
+
+.description {
+  font-family: lato; }
+  .description--section-top {
+    font-style: italic;
+    line-height: 1.2;
+    margin: 0px;
+    color: white; }
+
+.project-card {
+  margin: 3.5% 3%;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+  padding-bottom: 2px;
+  background-color: #FFF; }
+
+.image_project {
+  width: 100%;
+  height: 140px; }
+
+.title_project {
+  color: #606060;
+  font-weight: 700;
+  line-height: 1;
+  margin: 3px 5px 0px 5px; }
+
+.date_project {
+  color: #909090;
+  font-style: italic;
+  font-size: 14px;
+  margin: 0px 0px 0px 5px; }
+
+p {
+  line-height: 1.6;
+  margin: 10px 0px;
+  color: #303030; }
+  p.email-address {
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #424242;
+    color: #424242;
+    display: block;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+    text-align: center;
+    width: 50%;
+    float: left;
+    font-size: 16px;
+    line-height: 1.4; }
+  p.email-field-label--left {
+    float: left; }
+
+.button {
+  border: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+  padding: .5em;
+  background-color: #424242;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 24px auto 16px;
+  text-align: center;
+  text-decoration: none;
+  width: 30%; }
+  .button--email-copy {
+    display: block;
+    color: white;
+    background-color: #0BA389;
+    float: right;
+    margin: 0 0 25px 0; }
+    .button--email-copy-successful {
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+      float: right;
+      color: #0BA389;
+      background: white;
+      margin: 0 0 25px 0; }
+  .button--email-send {
+    display: block;
+    position: relative;
+    color: white;
+    background-color: #0BA389;
+    width: 75%;
+    margin-top: 10px; }
+
+label.email {
+  font-family: lato;
+  font-weight: 600;
+  margin: 2px 0px;
+  display: block;
+  color: #303030;
+  font-size: 18px; }
+
+input {
+  border-radius: 5px;
+  border: none;
+  border: 2px solid #424242;
+  height: 30px;
+  width: calc(100% - 14px);
+  padding: 0px 5px;
+  margin-bottom: 10px;
+  font-family: lato;
+  font-size: 16px;
+  font-weight: 600; }
+
+textarea {
+  border-radius: 5px;
+  border: none;
+  border: 2px solid #424242;
+  height: 90px;
+  padding: 5px;
+  width: calc(100% - 14px);
+  max-width: 100%;
+  font-family: lato;
+  font-size: 16px; }
+
+.display {
+  font-size: 35px;
+  font-family: Merriweather;
+  margin: 0px;
+  line-height: 1;
+  color: white;
+  text-decoration: none; }
+  .display--front {
+    text-align: center;
+    font-family: Raleway;
+    font-weight: bold;
+    z-index: 2;
+    position: relative; }
+  .display--section {
+    margin-bottom: 10px; }
+    .display--section--about {
+      margin-bottom: 0px; }
+
+.keep-nav {
+  background: #fff;
+  height: 7.5%;
+  width: 100%; }
+  @media screen and (max-width: 600px) {
+    .keep-nav {
+      background-color: #424242; } }
+
+.nav {
+  font-size: 0;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 3; }
+  .nav .nm {
+    color: #333;
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+    display: inline-block;
+    font-size: 22pt;
+    font-weight: 700;
+    float: left;
+    margin: 0;
+    -webkit-user-select: none;
+    /* Chrome/Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none; }
+    .nav .nm svg {
+      float: left;
+      position: relative;
+      height: 50px;
+      width: auto;
+      top: -8px;
+      padding-right: 10px; }
+    .nav .nm:hover {
+      color: #04d8ee; }
+    @media screen and (max-width: 1201px) {
+      .nav .nm {
+        font-size: 20pt;
+        font-weight: 700;
+        top: 1px;
+        position: relative; } }
+    @media screen and (max-width: 481px) {
+      .nav .nm {
+        font-size: 18pt; }
+        .nav .nm span {
+          color: #04d8ee; } }
+    @media screen and (max-width: 600px) {
+      .nav .nm {
+        color: #fff; }
+        .nav .nm:hover {
+          color: #04d8ee; }
+        .nav .nm span {
+          font-weight: 700; } }
+  .nav .nv-holder {
+    display: none; }
+    @media screen and (max-width: 600px) {
+      .nav .nv-holder {
+        position: fixed;
+        background-color: #fff;
+        box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.3);
+        display: block;
+        height: 0;
+        overflow: hidden; }
+        .nav .nv-holder a {
+          text-decoration: none; } }
+    .nav .nv-holder .na {
+      color: #000;
+      cursor: pointer;
+      font-family: "Raleway", sans-serif;
+      font-size: 18pt;
+      float: right;
+      margin: 0 0 0 4%;
+      -webkit-user-select: none;
+      /* Chrome/Safari */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none; }
+      .nav .nv-holder .na:hover {
+        color: #04d8ee; }
+      @media screen and (max-width: 1201px) {
+        .nav .nv-holder .na {
+          font-size: 15pt;
+          margin: 3px 0 0 4%; } }
+      @media screen and (max-width: 600px) {
+        .nav .nv-holder .na {
+          display: block;
+          text-align: center;
+          font-size: 20px;
+          font-weight: 600;
+          color: #000;
+          padding: 20px 30px;
+          margin: 0;
+          float: none; }
+          .nav .nv-holder .na:hover {
+            color: #04d8ee; }
+          .nav .nv-holder .na:active {
+            color: #424242;
+            background-color: #fff; } }
+  .nav .menu {
+    display: none;
+    float: right;
+    position: relative; }
+    @media screen and (max-width: 600px) {
+      .nav .menu {
+        display: block; } }
+    .nav .menu #Layer_1 {
+      fill: white;
+      position: relative;
+      height: 20px;
+      width: auto; }
+      @media screen and (max-width: 481px) {
+        .nav .menu #Layer_1 {
+          height: 18px; } }
+
+.name-link_holder {
+  height: 100%;
+  display: block;
+  width: 72.5%;
+  float: left;
+  margin-left: 2.5%; }
+
+.menu_holder {
+  height: 100%;
+  width: 22.5%;
+  float: right;
+  margin-right: 2.5%; }
+
+.nv-holder {
+  display: block;
+  z-index: 100;
+  top: 7.5%;
+  width: 100%; }
+
+.nv {
+  color: #333;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-size: 18pt;
+  float: right;
+  margin: 0 0 0 4%;
+  top: 1px;
+  position: relative;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none; }
+  @media screen and (max-width: 600px) {
+    .nv {
+      display: none; } }
+  @media screen and (max-width: 1201px) {
+    .nv {
+      font-size: 15pt;
+      margin: 3px 0 0 4%; } }
+  .nv:hover {
+    color: #04d8ee; }
+
+.swipeSlider_swipe-div {
+  width: 100%;
+  overflow: hidden;
+  height: 120px; }
+.swipeSlider_image-div {
+  height: 100%; }
+  .swipeSlider_image-div img {
+    height: 100%; }
+
+/*# sourceMappingURL=wagner.css.map */
