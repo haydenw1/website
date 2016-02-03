@@ -1,0 +1,33 @@
+.div--image {
+  &--tall {
+    margin: 25px 0;
+  }
+}
+
+
+.image {
+  &_project {
+    width: 100%;
+
+    //temporary for testing
+    //height: 140px;
+    //temporary for testing
+  }
+
+  &--tall {
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.description--image {
+  font-size: 85%;
+  font-style: italic;
+  margin: 5px auto;
+  line-height: 1.2;
+
+  &--tall {
+    width: 75%;
+  }
+}

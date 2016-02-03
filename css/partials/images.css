@@ -1,0 +1,19 @@
+.div--image--tall {
+  margin: 25px 0; }
+
+.image_project {
+  width: 100%; }
+.image--tall {
+  width: 75%;
+  margin: 0 auto;
+  display: block; }
+
+.description--image {
+  font-size: 85%;
+  font-style: italic;
+  margin: 5px auto;
+  line-height: 1.2; }
+  .description--image--tall {
+    width: 75%; }
+
+/*# sourceMappingURL=images.css.map */

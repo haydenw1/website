@@ -3,7 +3,7 @@
 
 html, body {
   min-height: 100%;
-  color: white;
+  //color: white;
   height: 100%;
 }
 
@@ -11,33 +11,52 @@ html, body {
 .title,
 .date,
 p,
+ul,
+ol,
 .button {
   font-family: lato;
 }
 
+ul,
+ol {
+  padding-left: 10%;
+  padding-right: 5%;
+  margin: 5px 0;
+}
+
+li {
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
 a {
+  text-decoration: none;
   &.display {
     text-decoration: none;
   }
+}
+
+img {
+  width: 100%;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: merriweather;
+  font-family: Raleway;
   color: #303030;
+  font-weight: 600;// change to raleway bold file
 }
 
 h1 {
-
+  font-size: 28px;
+  padding: 0 2.5%;
+  margin: 15px 0 10px;
 }
 
 h2 {
   font-size: 20px;
-  font-family: merriweather;
-  font-weight: 600;
-
   &.contact {
     margin: 15px 0;
   }
@@ -94,6 +113,7 @@ h2 {
   //height: 10%;
   padding: 15px;
   //width: 100%;
+  overflow: hidden;
 
   &_projects {
     background: #4AC5DE;
@@ -116,6 +136,11 @@ h2 {
     line-height: 1.2;
     margin: 0px;
     color: white;
+    padding: 0px;
+
+    &--small {
+      font-size: 14px;
+    }
   }
 }
 
@@ -126,17 +151,6 @@ h2 {
   background-color: #FFF;
 }
 
-.image {
-
-  &_project {
-    width: 100%;
-
-    //temporary for testing
-    height: 140px;
-    //temporary for testing
-  }
-}
-
 .title {
 
   &_project {
@@ -144,6 +158,7 @@ h2 {
     font-weight: 700;
     line-height: 1;
     margin: 3px 5px 0px 5px;
+    padding: 0px;
   }
 }
 
@@ -154,14 +169,16 @@ h2 {
     font-style: italic;
     font-size: 14px;
     margin: 0px 0px 0px 5px;
+    padding: 0px;
   }
 }
 
 p {
 
-  line-height: 1.6;
+  line-height: 1.4;
   margin: 10px 0px;
   color: #303030;
+  padding: 0 4%;
 
   &.email-address {
     padding: 8px;
@@ -201,10 +218,10 @@ p {
   font-weight: 600;
   font-size: 17px;
   line-height: 1.5;
-  margin: 24px auto 16px;
+  margin: 16px auto 16px;
   text-align: center;
   text-decoration: none;
-  width: 30%;
+  width: 75%;
 
   &--email-copy {
     display: block;
@@ -229,6 +246,22 @@ p {
     background-color: #0BA389;
     width: 75%;
     margin-top: 10px;
+  }
+
+  &--small{
+    font-size: 12px;
+    font-style: italic;
+    width: auto;
+    padding: .5em 1em;
+    margin: 10px 0 0px;
+
+    &--right {
+      float: right;
+    }
+
+    &--left {
+      float: left;
+    }
   }
 }
 
@@ -288,23 +321,23 @@ textarea {
 
 .display {
   font-size: 35px;
-  font-family: Merriweather;
+  font-family: Raleway;
+  font-weight: bold; //change to actual bold raleway
   margin: 0px;
   line-height: 1;
   color: white;
   text-decoration: none;
+  padding: 0px;
 
   &--front {
     text-align: center;
-    //height: 100%;
-    font-family: Raleway;
-    font-weight: bold;
     z-index: 2;
     position: relative;
   }
 
   &--section {
     margin-bottom: 10px;
+    font-size: 32px;
 
     &--about {
       margin-bottom: 0px;
@@ -313,5 +346,12 @@ textarea {
 }
 
 
+.div--card-height-limiter {
+  height: 185px;
+  overflow: hidden;
+}
+
+
 @import 'partials/nav';
 @import 'partials/swipeSlider';
+@import 'partials/images'

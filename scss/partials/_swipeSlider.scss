@@ -1,17 +1,25 @@
 .swipeSlider {
 
-  &_swipe-div {
-    width: 100%;
-    overflow: hidden;
-    height: 120px;
-  }
+  width: 100%;
+  overflow: hidden;
+  height: 200px;
+  margin-bottom: 25px;
+  position: relative;
 
   &_image-div {
    //padding-left: 10%;
    height: 100%;
+   position: absolute;
+   left: 0;
+   //transition: left .1s;
 
     img {
       height: 100%;
+
+      &.not-selected {
+        height: 80%;
+        padding: 20px 0%;
+      }
     }
   }
 }

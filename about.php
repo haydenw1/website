@@ -31,7 +31,7 @@
           <!--<p class="description description--section-top">Use the form below to send me an email, or copy my email address and use your own mail client to contact me.</p>-->
         </div>
 
-      <div class="container_below-header">
+
 
         <p>
           I am currently a 4th year student at the Rochester Institute of Technology (RIT)
@@ -50,7 +50,7 @@
           <p>After I graduate from the MAAT
           program in May of 2016, I plan on getting a Master of Business Administration degree
           in one year with RIT's 4+1 MBA program.</p>
-      </div>
+
     </div>
     <!--%%%%%%%%%%%%%%%%%%%%%%%%    MEAT   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
