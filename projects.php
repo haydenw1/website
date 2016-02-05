@@ -60,12 +60,8 @@
         </div>
       </a>
 
-      <div class="swipeSlider" id="0">
+      <div class="swipeSlider" id="3">
       </div>
-
-      <div class="swipeSlider" id="1">
-      </div>
-
 
       <div class="project-card">
         <img class="image image_project" src="assets/test/flickr_landscape_10_11.jpg"/>
@@ -86,7 +82,7 @@
   <script>
     //new Slider("index_port");
     //verticalCenter.center( "container", "front");
-    swipeSlider.setUp( testData );
+    swipeSlider.setUp( testData.omega );
   </script>
 </html>
 

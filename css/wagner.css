@@ -158,7 +158,8 @@ h2 {
     background: #bb2b16; }
   .front_projects {
     height: 50%;
-    background: #4AC5DE; }
+    background: #4AC5DE;
+    overflow: hidden; }
   .front_contact {
     height: 25%;
     background: #0BA389; }
@@ -488,16 +489,23 @@ textarea {
   overflow: hidden;
   height: 200px;
   margin-bottom: 25px;
+  padding-bottom: 10px;
   position: relative; }
   .swipeSlider_image-div {
-    height: 100%;
+    height: calc( 100% - 10px);
     position: absolute;
-    left: 0; }
-    .swipeSlider_image-div img {
-      height: 100%; }
-      .swipeSlider_image-div img.not-selected {
-        height: 80%;
-        padding: 20px 0%; }
+    left: 0;
+    padding-bottom: 10px; }
+  .swipeSlider_image {
+    height: 80%;
+    margin: 5.5% 0% 5.5%;
+    transition: height .25s, padding .25s, margin .25s; }
+    .swipeSlider_image--selected {
+      padding: 0px;
+      height: calc( 100% - 10px );
+      transition: height .25s, padding .25s, margin .25s;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+      width: auto; }
 
 .div--image--tall {
   margin: 25px 0; }
@@ -516,5 +524,12 @@ textarea {
   line-height: 1.2; }
   .description--image--tall {
     width: 75%; }
+
+.panAndZoom {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: -342px;
+  left: -5px; }
 
 /*# sourceMappingURL=wagner.css.map */

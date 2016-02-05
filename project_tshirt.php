@@ -40,6 +40,9 @@
         <li>Older t-shirt designs were not very cool looking</li>
       </ul>
 
+      <div class="swipeSlider" id="3">
+      </div>
+
       <div class="div--image--tall">
         <img class="image image--tall" src="assets/projects/images/sw_tshirt_white.jpg"/>
         <p class="description description--image description--image--tall">T-shirt design with white text on a dark gray t-shirt</p>
@@ -76,6 +79,7 @@
     //new Slider("index_port");
     //verticalCenter.center( "container", "front");
     //swipeSlider.setUp( testData );
+    swipeSlider.setUp( testData.omega );
   </script>
 </html>
 

@@ -13,6 +13,8 @@
       <script src="http://www.haydenwagner.com/assets/jquery/jquery-1.11.3.min.js"></script>
       <script src="js/verticalCenter.js"></script>
       <script src="js/navMenu.js"></script>
+      <script src="assets/test/testData.js"></script>
+      <script src="js/panAndZoom.js"></script>
     </head>
   <!--%%%%%%%%%%%%%%%%%%%%%%%%    HEADER   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
@@ -90,6 +92,7 @@
 
       <a href="projects.php" class="display">
         <div class="front front_projects">
+          <img class="panAndZoom" id="3"/>
           <p class="display display--front">Projects</p>
         </div>
       </a>
@@ -116,6 +119,8 @@
     verticalCenter.center( "menu", "nav" );
 
     navMenu.addMenuListeners( "menu_holder" );
+
+      panAndZoom.setUp( testData.omega );
   </script>
 </html>
 

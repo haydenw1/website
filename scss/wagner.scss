@@ -98,6 +98,7 @@ h2 {
   &_projects {
     height: 50%;
     background: #4AC5DE;
+    overflow: hidden;
   }
 
   &_contact {
@@ -354,4 +355,5 @@ textarea {
 
 @import 'partials/nav';
 @import 'partials/swipeSlider';
-@import 'partials/images'
+@import 'partials/images';
+@import 'partials/panAndZoom';

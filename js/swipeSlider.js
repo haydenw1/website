@@ -52,6 +52,7 @@ swipeSlider = {
       for ( var a = 0; a < count; a++ ) {
         console.log(key);
         this.data[ key ].centeredPositions.push( a * imageTotalWidth );
+        this.data[ key ].images[a].position = a * imageTotalWidth;
 
         var img = document.createElement( 'img' );
         img.className = "swipeSlider_image";
@@ -59,7 +60,18 @@ swipeSlider = {
         img.src = this.data[ key ].images[ a ].src;
         img.style.width = imageWidth + "px";
         img.style[ "margin-right" ] = imagePadding + "px";
+
+        this.data[ key ].images[a].element = img;
         imageDiv.appendChild( img );
+
+        var natH = $( img ).prop( "naturalHeight" );
+        var natW = $( img ).prop( "naturalWidth" );
+
+        var setHeight = ( imageWidth * natH ) / natW;
+        swipeDiv.style.height = setHeight + "px";
+
+        console.log( setHeight );
+
       }
 
       this.setSwipeListeners( swipeDiv );
@@ -67,7 +79,7 @@ swipeSlider = {
       swipeDiv.appendChild( imageDiv );
       //document.body.appendChild( swipeDiv );
 
-
+      this.changeHeight( this.data[ key ], 0 );
       //this.sliderDetails[ key ] = this.data[ key ];
     }
     console.log( this.data );
@@ -249,55 +261,58 @@ swipeSlider = {
 
 
     for ( var i = 0; i < cP.length; i++ ) {
-      //console.log( cP[ i ] );
+
       var cV = cP[ i ];
 
-      //console.log(cV);
-      //console.log(-xC);
+      if ( ( cV === 0 ) && ( -xC < cV ) ) {
 
-
-
-      if ( ( cV === 0 ) && ( -xC < cV ) ) { //|| ( -xC < ( cV + sD.halfImageTotal ) ) ) ) {
-        //make reference dom element in slider details object when go to multiple sliders
-        //console.log(cV);
-        //sD.el.style.left = cV + "px";
         $( sD.el ).animate( {
           left: -cV + "px"
         }, 250 );
 
         sD.xUpdate = cV;
+
       } else if ( ( i == cP.length - 1 ) && ( -xC > cV ) ) {
-        //sD.el.style.left = -cV + "px";
+
         $( sD.el ).animate( {
           left: -cV + "px"
         }, 250 );
 
         sD.xUpdate = -cV;
-      } else if ( ( -xC < ( cV + sD.halfImageTotal ) ) && ( -xC >= ( cV - sD.halfImageTotal + 1 ) ) ) {
-        console.log(-xC);
-        console.log(cV + sD.halfImageTotal);
-        console.log(cV - sD.halfImageTotal + 1);
 
+      } else if ( ( -xC < ( cV + sD.halfImageTotal ) ) && ( -xC > ( cV - sD.halfImageTotal - 1 ) ) ) {
 
-        //sD.el.style.left = -cV + "px";
         $( sD.el ).animate( {
           left: -cV + "px"
         }, 250 );
-        //
-        //
+
         sD.xUpdate = -cV;
+
       } else {
-        var height = sD.el.className;
-        //console.log(height);
 
-        //$( sD.el ).animate( {
-          //left: -cV + "px"
-        //}, 250 );
       }
-      //console.log( xC );
+      this.changeHeight( sD);
+    }
+  },
+
+  changeHeight: function( obj, start ) {
+    if ( start != undefined ) {
+      var pos = start;
+    } else {
+      var pos = -obj.xUpdate;
     }
 
-
+    console.log( -obj.xUpdate );
+    var images = obj.images;
+    for( var i = 0; i < images.length; i++ ) {
+      if ( images[i].position == pos ) {
+        console.log( images[i].position );
+        console.log( obj.xUpdate );
+        images[i].element.className = "swipeSlider_image--selected";
+      } else {
+        images[i].element.className = "swipeSlider_image";
+      }
+    }
   }
 
   //copyTouch: function( touch ) {
