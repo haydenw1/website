@@ -129,10 +129,11 @@ $large-screen:  1201px;
       -moz-user-select: none; /* Firefox */
       -ms-user-select: none;
         //padding: 11px 0px;
+        //
 
-     &:hover {
-      color: rgb(4, 216, 238);
-      //color: #fff;
+      &:hover {
+        color: rgb(4, 216, 238);
+        //color: #fff;
       }
 
       @media screen and (max-width: $large-screen) {
@@ -158,6 +159,11 @@ $large-screen:  1201px;
           color: $gray;
           background-color: #fff;
         }
+      }
+
+      &--reverse {
+        background-color: #999;
+        color: white;
       }
     }
   }

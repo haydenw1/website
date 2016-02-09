@@ -15,7 +15,7 @@
   }
 
   &--tall {
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
     display: block;
   }
@@ -26,8 +26,9 @@
   font-style: italic;
   margin: 5px auto;
   line-height: 1.2;
+  text-align: center;
 
   &--tall {
-    width: 75%;
+    width: 85%;
   }
 }

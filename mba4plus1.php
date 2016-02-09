@@ -12,8 +12,6 @@
       <link rel="stylesheet" type="text/css" href="css/wagner.css"/>
       <!--<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css"/>-->
       <script src="js/jquery/jquery-1.12.0.min.js"></script>
-      <script src="assets/test/testData.js"></script>
-      <script src="js/swipeSlider.js"></script>
     </head>
   <!--%%%%%%%%%%%%%%%%%%%%%%%%    HEADER   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
@@ -29,8 +27,8 @@
 
 
         <div class="section section_about">
-          <p class="display display--section display--section--about">About</p>
-          <!--<p class="description description--section-top">Use the form below to send me an email, or copy my email address and use your own mail client to contact me.</p>-->
+          <p class="description description--section-top">Rochester Institute of Technology's</p>
+          <p class="display display--section display--section--about">4+1 MBA Program</p>
         </div>
 
 
@@ -40,21 +38,8 @@
           in the Media Arts and Technology program (Bachelor of Science).
         </p>
 
-        <p>
-          In addition to classes I play rugby for RIT, and I am in an organization called Silver Wings.</p>
-
-          <div class="div--overflow-hidden">
-            <a href="silverWings.php">
-              <p class="button button--small button--small--right button--small--right--in-text button--small--right--in-text--about">Learn about Silver Wings</p>
-            </a>
-          </div>
-
-          <div class="swipeSlider" id="0">
-          </div>
 
 
-
-        <h2>My Major</h2>
         <p>
           The Media Arts and Technology (MAAT) program at RIT is focused
           on teaching students aspects of design and layout,
@@ -66,38 +51,10 @@
           business and project management.</p>
 
           <div class="div--overflow-hidden">
-            <a href="projects.php">
-              <p class="button button--small button--small--right button--small--right--in-text button--small--right--in-text--about">View my projects</p>
+            <a href="about.php">
+              <p class="button button--small button--small--right button--small--right--in-text button--small--right--in-text--about">Back to About Section</p>
             </a>
           </div>
-
-          <h2>Experience</h2>
-
-          <p>
-           Part-time work and a full-time cooperative education (co-op) position have prepared
-           me to apply the techniques I have practiced in the classroom to real world applications.
-           <p>
-
-           <div class="div--overflow-hidden">
-            <a href="coop.php">
-              <p class="button button--small button--small--right button--small--right--in-text button--small--right--in-text--about">Learn more about co-op</p>
-            </a>
-          </div>
-
-          <!--
-
-          <h2>4+1 MBA</h2>
-          <p>After I graduate from the MAAT
-          program in May of 2016, I plan on getting a Master of Business Administration degree
-          in one year with RIT's 4+1 MBA program.</p>
-
-          <div class="div--overflow-hidden">
-            <a href="mba4plus1.php">
-              <p class="button button--small button--small--right button--small--right--in-text button--small--right--in-text--about">Learn about the 4+1 MBA Program</p>
-            </a>
-          </div>
-
-          -->
 
     </div>
     <!--%%%%%%%%%%%%%%%%%%%%%%%%    MEAT   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
@@ -111,8 +68,6 @@
   <script>
     //new Slider("index_port");
     //verticalCenter.center( "container", "front");
-    //
-    swipeSlider.setUp( testData.about );
 
   </script>
 </html>

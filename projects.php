@@ -34,41 +34,41 @@
 
       <a href="project_smsApp.php">
         <div class="project-card">
-          <img class="image image_project" src="assets/projects/images/app/splashscreens-06 copy.png"/>
+          <img class="image image_project" src="assets/projects/app/splashscreens-06 copy.jpg"/>
           <p class="title title_project">School of Media Sciences App</p>
           <p class="date date_project">May 2015 - Present</p>
         </div>
       </a>
 
-      <a href="project_tshirt.php">
+      <a href="project_new-slider.php">
         <div class="project-card">
           <div class="div--card-height-limiter">
-            <img class="image image_project" src="assets/projects/images/sw_tshirt_blue.jpg"/>
+            <img class="image image_project" src="assets/projects/new-slider/new-slider_card.jpg"/>
           </div>
-          <p class="title title_project">Silver Wings T-shirt Design</p>
-          <p class="date date_project">November 2014</p>
+          <p class="title title_project">New Website Image Slider</p>
+          <p class="date date_project">January 2016</p>
         </div>
       </a>
 
       <a href="project_tshirt.php">
         <div class="project-card">
           <div class="div--card-height-limiter">
-            <img class="image image_project" src="assets/projects/images/sw_tshirt_blue.jpg"/>
+            <img class="image image_project" src="assets/projects/tshirt/sw_tshirt_blue.jpg"/>
           </div>
           <p class="title title_project">Silver Wings T-shirt Design</p>
           <p class="date date_project">November 2014</p>
         </div>
       </a>
 
-      <div class="swipeSlider" id="3">
-      </div>
-
-      <div class="project-card">
-        <img class="image image_project" src="assets/test/flickr_landscape_10_11.jpg"/>
-        <p class="title title_project">Nevada Spedada</p>
-        <p class="date date_project">15 September 2015</p>
-      </div>
-
+      <a href="project_first-slider.php">
+        <div class="project-card">
+          <div class="div--card-height-limiter">
+            <img class="image image_project" src="assets/projects/first-slider/first-slider_card.jpg"/>
+          </div>
+          <p class="title title_project">First Website Image Slider</p>
+          <p class="date date_project">September 2015</p>
+        </div>
+      </a>
 
     </div>
     <!--%%%%%%%%%%%%%%%%%%%%%%%%    MEAT   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
@@ -82,7 +82,7 @@
   <script>
     //new Slider("index_port");
     //verticalCenter.center( "container", "front");
-    swipeSlider.setUp( testData.omega );
+    //swipeSlider.setUp( testData.omega );
   </script>
 </html>
 

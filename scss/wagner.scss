@@ -19,6 +19,7 @@ ol,
 
 ul,
 ol {
+  color: #303030;
   padding-left: 10%;
   padding-right: 5%;
   margin: 5px 0;
@@ -51,12 +52,14 @@ h4 {
 
 h1 {
   font-size: 28px;
-  padding: 0 2.5%;
+  padding: 0 4%;
   margin: 15px 0 10px;
 }
 
 h2 {
   font-size: 20px;
+  padding: 0 4%;
+  margin-top: 15px;
   &.contact {
     margin: 15px 0;
   }
@@ -80,6 +83,10 @@ h2 {
       display:table;
       clear:both;
     }
+
+    &_story { //change, keep for right now until we get footer going or links to other stories
+      margin-bottom: 40px;
+    }
   }
 
   &_below-header {
@@ -92,12 +99,12 @@ h2 {
 
   &_about {
     height: 25%;
-    background: #bb2b16;
+    background: #004E64;
   }
 
   &_projects {
     height: 50%;
-    background: #4AC5DE;
+    background: #000;//#4AC5DE;
     overflow: hidden;
   }
 
@@ -125,7 +132,7 @@ h2 {
   }
 
   &_about {
-    background: #bb2b16;
+    background: #004E64;
   }
 }
 
@@ -230,6 +237,7 @@ p {
     background-color: #0BA389;
     float: right;
     margin: 0 0 25px 0;
+    width: 32%;
 
     &-successful {
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
@@ -237,6 +245,7 @@ p {
       color: #0BA389;
       background: white;
       margin: 0 0 25px 0;
+      width: 32%;
     }
   }
 
@@ -263,6 +272,22 @@ p {
     &--left {
       float: left;
     }
+  }
+}
+
+.button--small--right--in-text {
+  margin: 0px 4% 10px;
+
+  &--about {
+    background: #004E64;
+  }
+
+  &--project {
+    background: #4AC5DE;
+  }
+
+  &--contact {
+    background: #0BA389;
   }
 }
 
@@ -347,13 +372,29 @@ textarea {
 }
 
 
-.div--card-height-limiter {
-  height: 185px;
-  overflow: hidden;
+.div {
+  &--card-height-limiter {
+    height: 197px;
+    overflow: hidden;
+  }
+
+  &--overflow-hidden {
+    overflow: hidden;
+  }
+
 }
+
+span {
+  &.bold {
+    font-weight: bold;
+  }
+}
+
+
 
 
 @import 'partials/nav';
 @import 'partials/swipeSlider';
 @import 'partials/images';
 @import 'partials/panAndZoom';
+@import 'partials/oldDots';

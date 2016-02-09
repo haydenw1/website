@@ -101,6 +101,7 @@ ol,
 
 ul,
 ol {
+  color: #303030;
   padding-left: 10%;
   padding-right: 5%;
   margin: 5px 0; }
@@ -127,11 +128,13 @@ h4 {
 
 h1 {
   font-size: 28px;
-  padding: 0 2.5%;
+  padding: 0 4%;
   margin: 15px 0 10px; }
 
 h2 {
-  font-size: 20px; }
+  font-size: 20px;
+  padding: 0 4%;
+  margin-top: 15px; }
   h2.contact {
     margin: 15px 0; }
 
@@ -148,6 +151,8 @@ h2 {
       content: "";
       display: table;
       clear: both; }
+    .container_section_story {
+      margin-bottom: 40px; }
   .container_below-header {
     padding: 0px 5%; }
 
@@ -155,10 +160,10 @@ h2 {
   position: relative; }
   .front_about {
     height: 25%;
-    background: #bb2b16; }
+    background: #004E64; }
   .front_projects {
     height: 50%;
-    background: #4AC5DE;
+    background: #000;
     overflow: hidden; }
   .front_contact {
     height: 25%;
@@ -172,7 +177,7 @@ h2 {
   .section_contact {
     background: #0BA389; }
   .section_about {
-    background: #bb2b16; }
+    background: #004E64; }
 
 .description {
   font-family: lato; }
@@ -247,13 +252,15 @@ p {
     color: white;
     background-color: #0BA389;
     float: right;
-    margin: 0 0 25px 0; }
+    margin: 0 0 25px 0;
+    width: 32%; }
     .button--email-copy-successful {
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
       float: right;
       color: #0BA389;
       background: white;
-      margin: 0 0 25px 0; }
+      margin: 0 0 25px 0;
+      width: 32%; }
   .button--email-send {
     display: block;
     position: relative;
@@ -271,6 +278,15 @@ p {
       float: right; }
     .button--small--left {
       float: left; }
+
+.button--small--right--in-text {
+  margin: 0px 4% 10px; }
+  .button--small--right--in-text--about {
+    background: #004E64; }
+  .button--small--right--in-text--project {
+    background: #4AC5DE; }
+  .button--small--right--in-text--contact {
+    background: #0BA389; }
 
 label.email {
   font-family: lato;
@@ -323,8 +339,13 @@ textarea {
       margin-bottom: 0px; }
 
 .div--card-height-limiter {
-  height: 185px;
+  height: 197px;
   overflow: hidden; }
+.div--overflow-hidden {
+  overflow: hidden; }
+
+span.bold {
+  font-weight: bold; }
 
 .keep-nav {
   background: #fff;
@@ -425,6 +446,9 @@ textarea {
           .nav .nv-holder .na:active {
             color: #424242;
             background-color: #fff; } }
+      .nav .nv-holder .na--reverse {
+        background-color: #999;
+        color: white; }
   .nav .menu {
     display: none;
     float: right;
@@ -487,25 +511,39 @@ textarea {
 .swipeSlider {
   width: 100%;
   overflow: hidden;
-  height: 200px;
-  margin-bottom: 25px;
-  padding-bottom: 10px;
+  margin: 25px 0;
+  padding-bottom: 20px;
   position: relative; }
+  .swipeSlider--no-caption--gray {
+    padding-top: 15px;
+    background: #ccc; }
   .swipeSlider_image-div {
-    height: calc( 100% - 10px);
+    height: calc( 100% - 30px);
     position: absolute;
-    left: 0;
-    padding-bottom: 10px; }
+    left: 0; }
   .swipeSlider_image {
-    height: 80%;
-    margin: 5.5% 0% 5.5%;
+    height: calc( 100% - 50px);
+    margin: 25px 0;
     transition: height .25s, padding .25s, margin .25s; }
     .swipeSlider_image--selected {
       padding: 0px;
-      height: calc( 100% - 10px );
+      height: 100%;
       transition: height .25s, padding .25s, margin .25s;
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
       width: auto; }
+  .swipeSlider_captionDiv {
+    height: 100%;
+    display: inline-block; }
+  .swipeSlider_caption {
+    font-size: 85%;
+    font-style: italic;
+    margin: 5px 0px;
+    line-height: 1.2;
+    width: calc( 100% - 8px );
+    text-align: center;
+    padding: 0px;
+    opacity: 0;
+    transition: opacity .25s; }
 
 .div--image--tall {
   margin: 25px 0; }
@@ -513,7 +551,7 @@ textarea {
 .image_project {
   width: 100%; }
 .image--tall {
-  width: 75%;
+  width: 85%;
   margin: 0 auto;
   display: block; }
 
@@ -521,15 +559,26 @@ textarea {
   font-size: 85%;
   font-style: italic;
   margin: 5px auto;
-  line-height: 1.2; }
+  line-height: 1.2;
+  text-align: center; }
   .description--image--tall {
-    width: 75%; }
+    width: 85%; }
 
 .panAndZoom {
   position: absolute;
   width: auto;
   height: auto;
-  top: -342px;
+  opacity: .65;
   left: -5px; }
+
+#dot-holder {
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  margin: 25px auto;
+  height: 80px;
+  display: block;
+  position: relative;
+  overflow: hidden; }
 
 /*# sourceMappingURL=wagner.css.map */

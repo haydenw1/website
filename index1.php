@@ -56,7 +56,7 @@
       <a class="name-link_holder" href="index1.php">
           <div class="head nm link nameCenter" id="name">
             <!-- FIRST PHP INCLUDE ***LOGO*** %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-            <?php include "php_includes/logo.php"; ?>
+            <!--<?php //include "php_includes/logo.php"; ?>-->
             <span class="light-name">HAYDEN</span> WAGNER
           </div>
         </a>
@@ -66,6 +66,8 @@
           <a href="about.php"><div class="head na link">About</div></a>
           <a href="projects.php"><div class="head na link">Projects</div></a>
           <a href="contact.php"><div class="head na link">Contact</div></a>
+          <a href="coop.php"><div class="head na na--reverse link">RIT Co-op</div></a>
+          <a href="silverWings.php"><div class="head na na--reverse link">Silver Wings</div></a>
         </div>
 
         <a href="http://www.haydenwagner.com/ideas.php"><div class="head nv link">Contact</div></a>
@@ -92,7 +94,7 @@
 
       <a href="projects.php" class="display">
         <div class="front front_projects">
-          <img class="panAndZoom" id="3"/>
+          <img class="panAndZoom"/>
           <p class="display display--front">Projects</p>
         </div>
       </a>
@@ -107,7 +109,7 @@
     <!--%%%%%%%%%%%%%%%%%%%%%%%%    MEAT   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
     <!--%%%%%%%%%%%%%%%%%%%%%%%%  FOOTER   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-    <?php include "php_includes/footer.php" ?>
+    <?php //include "php_includes/footer.php" ?>
     <!--%%%%%%%%%%%%%%%%%%%%%%%%  FOOTER   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
 
@@ -120,7 +122,9 @@
 
     navMenu.addMenuListeners( "menu_holder" );
 
-      panAndZoom.setUp( testData.omega );
+    $( document ).ready( function() {
+      panAndZoom.setUp( testData );
+    });
   </script>
 </html>
 
