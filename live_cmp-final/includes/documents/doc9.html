@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml">
+   <body>
+      
+      <h1 xmlns="">Preserving Image Quality in Page Layout</h1>
+      <h2 xmlns=""></h2>
+      
+      
+      <h2 xmlns="">Alternative Resources</h2>
+      
+      <p xmlns="">This document is intended to help you preserve image quality 
+         as you work with your files in page layout applications. This 
+         document only covers image quality in its most basic form.
+      </p>
+      
+      <p xmlns="">For a more in-depth understanding of this topic, we recommend 
+         the following School of Print Media classes: Print Production 
+         Workflow and Digital Foundations. If you have questions, 
+         please consult your instructor or a DPC Customer Service Representative (CSR).
+      </p>
+      
+      
+      <h2 xmlns="">Linked Images</h2>
+      
+      <p xmlns="">In most layout applications (e.g. InDesign, QuarkXPress), the 
+         most important aspect to remember while working with images 
+         is that all images must be linked back to their original files. 
+         Placing or importing 
+         <span style="font-style:italic">(Figure 1)</span> an image into these layouts only 
+         creates a link back to the original image file. If files become 
+         unlinked, a low-resolution (72 ppi) image is used in its place.
+      </p>
+      
+      <p xmlns="">Therefore, it is always important for the layout application to 
+         maintain the path back to the original image. Ignoring warnings 
+         about unlinked files will only lead to low resolution and poor 
+         output 
+         <span style="font-style:italic">(Figure 2)</span>. If PDF files are created properly, they will 
+         include all necessary elements and images in a single file.
+      </p>
+      
+      <img xmlns="" src="images/9_figure1.jpg"></img>
+      <span xmlns="" class="caption">Figure 1: Placing images in InDesign</span>
+      
+      <img xmlns="" src="images/9_figure2.jpg"></img>
+      <span xmlns="" class="caption">Figure 2: Missing or modified links warning</span>
+      
+      
+      
+      <h2 xmlns="">Embedded Images</h2>
+      
+      <p xmlns="">Embedding images is the alternative option to linking the images 
+         to the document. By copying and pasting an image from another 
+         program in your layout document, the image will be embedded in 
+         the document. In contrast, by linking the image to its original file, 
+         you are creating a reference back to the original image.
+      </p>
+      
+      <p xmlns="">Although pasting the image will not degrade the image quality, 
+         it does create some functional issues. First, it increases the file 
+         size of your layout document. Second, since there is no link back 
+         to the original; if the original is modified, the image will have 
+         to be re-pasted. Also, if your layout document should become 
+         corrupt, deleted or lost, the embedded images will also be 
+         corrupt, deleted or lost. In a more streamlined workflow, linked 
+         images will automatically update themselves in the layout 
+         document if they have been modified.
+      </p>
+      
+      <p xmlns="">Many users assume that embedding images into their layout 
+         document means that there will be fewer files to manage. 
+         However, both Adobe and Quark have created easy solutions for 
+         gathering the layout assets (e.g. anything placed or imported 
+         into the document) in one common place. In Adobe InDesign, 
+         this is referred to as “packaging” a file 
+         <span style="font-style:italic">(Figure 3)</span>. In QuarkXPress, 
+         this is referred to as “collecting for output”.
+      </p>
+      
+      
+      <img xmlns="" src="images/9_figure3.jpg"></img>
+      <span xmlns="" class="caption">Figure 3: Packaging files in InDesign (File &gt; Package</span>
+      
+      
+      
+      <h2 xmlns="">Low-Resolution Images</h2>
+      
+      <p xmlns="">A generally accepted resolution when printing images is 300 ppi. 
+         Therefore, it is important to preserve this resolution throughout 
+         page composition and processing. Low-resolution images, such 
+         as those taken from a website (72 ppi), will typically be visibly 
+         pixilated when printed 
+         <span style="font-style:italic">(Figure 4)</span>. Resampling a low-resolution 
+         image to a higher resolution using Photoshop may soften the 
+         image and create an undesirable file. In Photoshop, by disabling 
+         “Resample Image”, the user can see the actual amount of original 
+         pixel data available for use 
+         <span style="font-style:italic">(Figure 5)</span>.
+         
+      </p>
+      
+      <img xmlns="" src="images/9_figure4.jpg"></img>
+      <span xmlns="" class="caption">Figure 4: Low-resolution image (72 ppi) in print form</span>
+      
+      <img xmlns="" src="images/9_figure5.jpg"></img>
+      <span xmlns="" class="caption">Figure 5: Image resize options in Adobe Photoshop (Image &gt; Image Size)</span>
+      
+      
+      <p xmlns="">Unfortunately, in this case, more is better. The more pixel data 
+         available, the more adjustment you have up or down. For 
+         example, a typical 8-megapixel camera produces images that are 
+         about 3266 by 2450 pixels. Divide each dimension by 300 to find 
+         the largest quality image you can print. In this case, 3266 / 300 = 
+         10.89" and 2450 / 300 = 8.17 inches. Thus, any print of this image 
+         that is larger than 10.89" by 8.17" will be degraded in quality. 
+         However, images printed at a smaller size will not be.
+      </p>
+      
+      <p xmlns="">Put simply, images captured at print resolution will be 
+         appropriate for print or web (they will need to be resampled for 
+         web due to file size). However, images captured or saved for web 
+         content will not be appropriate for quality prints.
+      </p>
+      
+      
+      <h2 xmlns="">High-Resolution Images</h2>
+      
+      <p xmlns="">While some print processes, such as wide-format inkjet, may see 
+         quality advantages from a resolution higher than 300 ppi, this 
+         is not true for all types of output (digital or conventional). For 
+         more complex files, such as multiple-page PDFs, including many 
+         images at a resolution higher than 300 ppi will increase file size 
+         and processing time. The overall difference in quality may not be 
+         worth this extended processing time.
+      </p>
+      
+      <p xmlns="">If you are working in a page-layout application, such as InDesign 
+         or QuarkXPress, there are options to resample the images as they 
+         are exported into a PDF file 
+         <span style="font-style:italic">(Figure 6)</span>. For more information on 
+         this, please reference the “Understanding Options for Saving to PDF” guide.
+         
+      </p>
+      
+      <img xmlns="" src="images/9_figure6.jpg"></img>
+      <span xmlns="" class="caption">Figure 6: Options to resample when creating a PDF from InDesign (File &gt; Export)</span>
+      
+      
+      <h2 xmlns="">Resizing Images</h2>
+      
+      <p xmlns="">Image resizing, whether it be up or down, should preferably 
+         be done in an image processing application (e.g. Photoshop). 
+         Although page-layout applications are physically capable of 
+         resizing images, an application like Photoshop is a more capable 
+         application to manipulate raster images.
+      </p>
+      
+      <p xmlns="">In a page-layout application, even if an image is manually 
+         downsized, the excess pixel data still exists in the original linked 
+         file. Therefore, this will reflect in the file size of the document 
+         (if embedded), PDF (if not resampled), or the packaged folder. 
+         The image transformations will have to be processed at the RIP, 
+         which will lead to longer production times.
+         
+      </p>
+      
+      <p xmlns="">In a performed test, a document containing a TIFF image 
+         (originally, 300 ppi at 18" by 13.5") that was sized down to 3" by 
+         2.24" in InDesign (but not resampled in Photoshop) yielded a 
+         packaged “Links” folder size of 89.5 MB. However, a document 
+         with the same image downsampled in Photoshop before being 
+         placed into InDesign yielded a “Links” folder size of 2.9 MB.
+      </p>
+      
+      
+      
+      
+   </body>
+</html>

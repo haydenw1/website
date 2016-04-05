@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Please login to continue to test directory"
+AuthUserFile  /home/hbw6955/.htpasswd
+Require valid-user

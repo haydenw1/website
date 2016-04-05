@@ -1,8 +1,40 @@
 @font-face {
   font-family: 'Raleway';
   src: url('../fonts/Raleway-Regular.ttf') format('truetype'); /* IE6-IE8 */
+  font-style: normal;
+  font-weight: 400;
 }
 
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Medium.ttf') format('truetype'); /* IE6-IE8 */
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-SemiBold.ttf') format('truetype'); /* IE6-IE8 */
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Bold.ttf') format('truetype'); /* IE6-IE8 */
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-ExtraBold.ttf') format('truetype'); /* IE6-IE8 */
+  font-style: normal;
+  font-weight: 800;
+}
+
+
+/*
 @font-face {
   font-family: 'Merriweather';
   font-style: normal;
@@ -44,7 +76,7 @@
   font-style: italic;
   font-weight: 700;
   src: url('../fonts/merriweather-bold-italic.ttf') format('truetype'),
-}
+}*/
 
 @font-face {
   font-family: 'Lato';

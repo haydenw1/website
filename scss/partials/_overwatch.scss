@@ -1,0 +1,17 @@
+.overwatch {
+
+  width: 860px;
+  margin: 0 auto;
+  padding: 0 20px;
+  hidden: overflow;
+  overflow: hidden;
+
+  @media screen and (max-width: $large-screen) {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+

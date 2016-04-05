@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+  <title>DPC Resources</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  
+  <!-- main page font -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  
+  <!-- my jquery and js page -->
+  <script type="text/javascript" src="js/switch.js"></script>
+  
+</head>
+
+<body>
+	<div id="main">
+		<!-- DPC and corresponding text 'digital publishing center' -->
+        <div id="homepage_header">
+			<p id="dpc_acronym">DPC</p>
+			<p id="dpc_name">Digital Publishing Center</p>
+		</div>
+		
+        <!-- wrapper with category links and names and dropdown to doc names and link, no hover dropdown at certain width -->
+        <div id="icons_wrap">
+			
+			<div class="dropdown">
+				
+                <!-- create category link and image -->
+				<a alt="cat1.html">
+					<img class="svg" src="images/icons/icon1.svg">
+					<img class="svg_replace" src="images/icons/icon1_dark.svg">
+					<p>Create</p>
+				</a>
+				
+                <!-- create category documents in dropdown, stops displaying at certain width-->
+				<ul class="dropdown_menu">
+					<li><a alt="doc7.html">InDesign Bleeds</a></li>
+					<li><a alt="doc12.html">Roland CC</a></li>
+					<li><a alt="doc14.html">Combine PDFs (Long)</a></li>
+					<li><a alt="doc1.html">Combine PDFs (Short)</a></li>
+				</ul>
+				
+			</div>
+			
+			<div class="dropdown">
+				
+                <!-- process category link and image-->
+				<a alt="cat2.html">
+					<img class="svg" src="images/icons/icon2.svg">
+					<img class="svg_replace" src="images/icons/icon2_dark.svg">
+					<p>Process</p>
+				</a>
+				
+                <!-- process category documents in dropdown, stops displaying at certain width-->
+				<ul class="dropdown_menu">
+					<li><a alt="doc2.html">Metadata Templates</a></li>
+					<li><a alt="doc5.html">XMP Panels *CIAS*</a></li>
+					<li><a alt="doc8.html">Batch Processing</a></li>
+					<li><a alt="doc9.html">Image Quality</a></li>
+					<li><a alt="doc13.html">Metadata</a></li>
+                    <li><a alt="doc10.html">Basic Imposition</a></li>
+                    <li><a alt="doc15.html">Print Booklet</a></li>
+				</ul>
+				
+			</div>
+			
+			<div class="dropdown">
+				
+                <!-- finish category link and image-->
+				<a alt="cat3.html">
+					<img class="svg" src="images/icons/icon3.svg">
+					<img class="svg_replace" src="images/icons/icon3_dark.svg">
+					<p>Finish</p>
+				</a>
+				
+                <!-- finish category documents in dropdown, stops displaying at certain width-->
+				<ul class="dropdown_menu">
+					<li><a alt="doc6.html">XMP Panels</a></li>
+					<li><a alt="doc3.html">Portal (Long)</a></li>
+                    <li><a alt="doc4.html">Portal (Short)</a></li>
+                    <li><a alt="doc11.html">PDF Creation</a></li>
+                    <li><a alt="doc16.html">Digital Paper</a></li>
+				</ul>
+				
+			</div>
+			
+		</div>
+		
+        <!-- directions for the hover widths of the window. hidden when no hover elements available -->
+		<p id="directions">Click on a category to learn more, or hover over a category and select a document</p>
+        
+        <!-- directions for click only width of window. hidden when hover elements available -->
+        <p id="click_directions">Click on a category to learn more and select a document</p>
+	</div>
+</body></html>

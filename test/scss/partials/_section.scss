@@ -1,0 +1,145 @@
+.section {
+  padding: 130px 0 20px;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: $medium-screen) {
+    padding: 100px 0 20px;
+  }
+
+  @media screen and (max-width: $small-screen) {
+    padding: 90px 0 10px;
+  }
+
+  &_about {
+    background: #0370B0;
+  }
+
+  &_projects {
+    background: #4AC5DE;
+  }
+
+  &_contact {
+    background: #0BA389;
+  }
+}
+
+.gradient {
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 85px, rgba(0,0,0,0.65) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 85px,rgba(0,0,0,0.65) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 85px,rgba(0,0,0,0.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @media screen and (max-width: $medium-screen) {
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 75px, rgba(0,0,0,0.65) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 75px,rgba(0,0,0,0.65) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 75px,rgba(0,0,0,0.5) 100%);
+  }
+
+   @media screen and (max-width: $small-screen) {
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 65px, rgba(0,0,0,0.65) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 65px,rgba(0,0,0,0.65) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 65px,rgba(0,0,0,0.5) 100%);
+  }
+}
+
+.description {
+  font-family: lato;
+
+  &--section-top {
+    font-style: italic;
+    line-height: 1.2;
+    //margin: 0px;
+    color: white;
+    //padding: 0px;
+    z-index: 2;
+    position: relative;
+
+    max-width: 860px;
+    margin: 10px auto 0;
+    padding: 0 20px;
+
+    @media screen and (max-width: $large-screen) {
+      max-width: 600px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+      padding: 0 10px;
+    }
+
+    &--small {
+      font-size: 14px;
+    }
+  }
+}
+
+.project-card {
+
+  box-shadow: 0px 2px 6px rgba(0,0,0,.20);
+  padding-bottom: 2px;
+  background-color: #FFF;
+  width: calc(33.3% - 20px);
+  margin: 0px 20px 20px 0px;
+  float: left;
+
+  &:hover {
+    opacity: .75;
+  }
+
+  @media screen and (max-width: $large-screen) {
+    width: calc(50% - 20px);
+    //float: left;
+  }
+
+
+  //@media screen and (max-width: $small-screen) {
+  @media screen and (max-width: 600px) {
+    //margin: 0 10px 15px 10px;
+    width: calc(100% - 40px);
+    max-width: 400px;
+    margin: 0 auto 20px;
+    float: none;
+  }
+
+  &--in-text-link {
+    width: calc(100% - 40px);
+    max-width: 400px;
+    margin: 20px auto 35px;
+    float: none;
+  }
+}
+
+.title {
+
+  &_project {
+    color: #606060;
+    font-weight: 700;
+    line-height: 1;
+    margin: 7px 7px 0px 7px !important;
+    padding: 0px;
+  }
+}
+
+.date {
+
+  &_project {
+    color: #909090;
+    font-style: italic;
+    font-size: 14px;
+    margin: 2px 0px 2px 7px !important;
+    padding: 0px;
+    line-height: 1;
+  }
+
+  &_body-text {
+    font-size: 95%;
+    font-style: italic;
+    margin: 5px 0;
+  }
+}

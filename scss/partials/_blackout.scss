@@ -1,0 +1,66 @@
+.blackout {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0,0,0,.9);
+  z-index: 100;
+
+  &_center-message {
+    position: relative;
+    max-width: 400px;
+    margin: 30% auto 0;
+
+    &--form-errors {
+      margin: 20px auto;
+    }
+
+    @media screen and (max-width: $small-screen) {
+      max-width: 300px;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    p {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    span {
+      font-style: italic;
+    }
+
+    a {
+      background: #0BA389;
+    }
+  }
+
+  &_form-errors {
+    bottom: auto;
+    display: none;
+  }
+
+
+  &_copy-warning {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    display: none;
+
+    h1 {
+      color: red;
+    }
+
+  }
+}
+
+.html--no-scroll {
+  height: 100%;
+  overflow: hidden;
+}

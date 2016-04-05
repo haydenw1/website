@@ -15,9 +15,21 @@
   }
 
   &--tall {
-    width: 85%;
+    //width: 85%;
     margin: 0 auto;
     display: block;
+
+    &--50 {
+      width: 50%;
+
+      @media screen and (max-width: $medium-screen) {
+        //width: 60%
+      }
+
+      @media screen and (max-width: $small-screen) {
+        width: 75%;
+      }
+    }
   }
 }
 

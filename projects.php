@@ -3,38 +3,29 @@
 
   <!--%%%%%%%%%%%%%%%%%%%%%%%%    HEADER   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
   <?php include "php_includes/header.php"; ?>
-
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>HW Projects</title>
-
-      <link rel="stylesheet" type="text/css" href="css/wagner.css"/>
-      <script src="http://www.haydenwagner.com/assets/jquery/jquery-1.11.3.min.js"></script>
-      <script src="js/verticalCenter.js"></script>
-      <script src="assets/test/testData.js"></script>
-      <script src="js/swipeSlider.js"></script>
-    </head>
   <!--%%%%%%%%%%%%%%%%%%%%%%%%    HEADER   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
   <body>
 
     <!--%%%%%%%%%%%%%%%%%%%%%%%%    NAV    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
     <?php include "php_includes/nav.php"; ?>
-    <p class="header">Hayden Wagner</p>
     <!--%%%%%%%%%%%%%%%%%%%%%%%%    NAV    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
     <!--%%%%%%%%%%%%%%%%%%%%%%%%    MEAT   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-    <div class="container container_section">
+    <div class="section section_projects">
+      <div class="gradient"></div>
+      <p class="display display--section">Projects</p>
+      <p class="description description--section-top">View different projects I have done in school, for an organization, or on my own time.</p>
+    </div>
 
-      <div class="section section_projects">
-        <p class="display display--section">Projects</p>
-        <p class="description description--section-top">View different projects I have done in school, for an organization, or by myself.</p>
-      </div>
+    <div class="overwatch--projects">
+    <div class="container container_section container_section--project-home">
 
       <a href="project_smsApp.php">
         <div class="project-card">
-          <img class="image image_project" src="assets/projects/app/splashscreens-06 copy.jpg"/>
+          <div class="div--card-height-limiter">
+            <img class="image image_project" src="assets/projects/app/splashscreens-06 copy.jpg"/>
+          </div>
           <p class="title title_project">School of Media Sciences App</p>
           <p class="date date_project">May 2015 - Present</p>
         </div>
@@ -43,10 +34,50 @@
       <a href="project_new-slider.php">
         <div class="project-card">
           <div class="div--card-height-limiter">
-            <img class="image image_project" src="assets/projects/new-slider/new-slider_card.jpg"/>
+            <img class="image image_project" src="assets/projects/new-slider/new-slider_card.png"/>
           </div>
           <p class="title title_project">New Website Image Slider</p>
           <p class="date date_project">January 2016</p>
+        </div>
+      </a>
+
+      <a href="project_map.php">
+        <div class="project-card">
+          <div class="div--card-height-limiter">
+            <img class="image image_project" src="assets/projects/map/mapPanZoom.jpg"/>
+          </div>
+          <p class="title title_project">Co-op Map</p>
+          <p class="date date_project">July 2015</p>
+        </div>
+      </a>
+
+      <a href="project_cmp.php">
+        <div class="project-card">
+          <div class="div--card-height-limiter">
+            <img class="image image_project" src="assets/projects/cmp-final/cmp_home-links-open--small.jpg"/>
+          </div>
+          <p class="title title_project">Cross Media Publishing Project</p>
+          <p class="date date_project">May 2015</p>
+        </div>
+      </a>
+
+      <a href="project_first-slider.php">
+        <div class="project-card">
+          <div class="div--card-height-limiter">
+            <img class="image image_project" src="assets/projects/first-slider/first-slider_card.jpg"/>
+          </div>
+          <p class="title title_project">First Website Image Slider</p>
+          <p class="date date_project">March 2015</p>
+        </div>
+      </a>
+
+      <a href="project_dataPub.php">
+        <div class="project-card">
+          <div class="div--card-height-limiter">
+            <img class="image image_project" src="assets/projects/datapub/directMail-small.jpg"/>
+          </div>
+          <p class="title title_project">Database Publishing Project</p>
+          <p class="date date_project">December 2014</p>
         </div>
       </a>
 
@@ -60,16 +91,7 @@
         </div>
       </a>
 
-      <a href="project_first-slider.php">
-        <div class="project-card">
-          <div class="div--card-height-limiter">
-            <img class="image image_project" src="assets/projects/first-slider/first-slider_card.jpg"/>
-          </div>
-          <p class="title title_project">First Website Image Slider</p>
-          <p class="date date_project">September 2015</p>
-        </div>
-      </a>
-
+    </div>
     </div>
     <!--%%%%%%%%%%%%%%%%%%%%%%%%    MEAT   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
@@ -80,15 +102,7 @@
 
   </body>
   <script>
-    //new Slider("index_port");
-    //verticalCenter.center( "container", "front");
-    //swipeSlider.setUp( testData.omega );
+
   </script>
 </html>
 
-<!--
-to do next
-
-1. small script to center text vertically based on their css percentage heights on homepage
-2. move nav over and get mobile version working
-3. rough projects format (picture, title, date....at least)

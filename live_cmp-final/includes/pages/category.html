@@ -1,0 +1,108 @@
+<!-- div to tell my jquery which page was displayed. Probably not the best way to do it.-->
+<div id="category_placeholder"></div>
+
+<!-- circle logo that reloads index.html. alt is to not throw errors with js doc/cat loading system -->
+<a href="index.php" alt="none">
+			<div id="logo">
+				<p id="dpc_acronym">DPC</p>
+			</div>
+		</a>
+
+        <!-- button to display category names and link at certain width -->
+		<div id="cat_drop">
+
+            <!-- svg of three white lines in cat_drop-->
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="36px" height="35.833px" viewBox="0 3.458 36 35.833" enable-background="new 0 3.458 36 35.833" xml:space="preserve">
+                <g>
+                    <line fill="none" x1="5.007" y1="21.6" x2="31.705" y2="21.6"/>
+                    <g>
+                        <path d="M5.007,24.1c8.899,0,17.799,0.001,26.698-0.001c3.228,0.002,3.227-5,0-4.999c-8.899-0.001-17.797,0-26.697,0
+                            C1.78,19.1,1.78,24.099,5.007,24.1L5.007,24.1z"/>
+                    </g>
+                </g>
+                <g>
+                    <line fill="none" x1="5.006" y1="34.2" x2="31.704" y2="34.2"/>
+                    <g>
+                        <path d="M5.006,36.7c8.899,0,17.799,0.001,26.698-0.001c3.228,0.002,3.227-5,0-4.999c-8.899-0.001-17.797,0-26.697,0
+                            C1.779,31.7,1.779,36.699,5.006,36.7L5.006,36.7z"/>
+                    </g>
+                </g>
+                <g>
+                    <line fill="none" x1="5.007" y1="9" x2="31.705" y2="9"/>
+                    <g>
+                        <path d="M5.006,11.5c8.899,0,17.799,0,26.699,0c3.226,0,3.226-5,0-5c-8.899,0-17.798,0-26.698,0C1.779,6.5,1.78,11.5,5.006,11.5
+                            L5.006,11.5z"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+		<!-- navigation menu with doc dropdowns at wide viewing and then just category names to click at a certain width. at certain width it becomes the category list for cat_drop^ -->
+        <!-- same as doc nav, should have used .php -->
+        <div id="nav">
+
+			<!-- create category link -->
+            <div class="nav_dropdown">
+
+                <!-- svgs in background of link -->
+                <img class="nav_svg" src="images/icons/icon1.svg">
+				<img class="nav_svg_replace" src="images/icons/icon1_dark.svg">
+                <a alt="cat1.html">Create</a>
+
+				<!-- first category dropdown doc list -->
+                <ul class="nav_dropdown_menu">
+					<li><a alt="doc7.html">InDesign Bleeds</a></li>
+					<li><a alt="doc12.html">Roland CC</a></li>
+					<li><a alt="doc14.html">Combine PDFs (Long)</a></li>
+					<li><a alt="doc1.html">Combine PDFs (Short)</a></li>
+				</ul>
+
+			</div>
+
+            <!-- process category link -->
+			<div class="nav_dropdown">
+
+                <!-- svgs in background of link -->
+				<img class="nav_svg" src="images/icons/icon2.svg">
+				<img class="nav_svg_replace" src="images/icons/icon2_dark.svg">
+                <a alt="cat2.html">Process</a>
+
+                <!-- second category dropdown doc list -->
+				<ul class="nav_dropdown_menu">
+					<li><a alt="doc2.html">Metadata Templates</a></li>
+					<li><a alt="doc5.html">XMP Panels *CIAS*</a></li>
+					<li><a alt="doc8.html">Batch Processing</a></li>
+					<li><a alt="doc9.html">Image Quality</a></li>
+					<li><a alt="doc13.html">Metadata</a></li>
+                    <li><a alt="doc10.html">Basic Imposition</a></li>
+                    <li><a alt="doc15.html">Print Booklet</a></li>
+				</ul>
+
+			</div>
+
+             <!-- finish category link -->
+			<div class="nav_dropdown">
+
+                <!-- svgs in background of link-->
+				<img class="nav_svg" src="images/icons/icon3.svg">
+				<img class="nav_svg_replace" src="images/icons/icon3_dark.svg">
+                <a alt="cat3.html">Finish</a>
+
+                <!-- third category dropdown doc list -->
+				<ul class="nav_dropdown_menu">
+					<li><a alt="doc6.html">XMP Panels</a></li>
+					<li><a alt="doc3.html">Portal (Long)</a></li>
+                    <li><a alt="doc4.html">Portal (Short)</a></li>
+                    <li><a alt="doc11.html">PDF Creation</a></li>
+                    <li><a alt="doc16.html">Digital Paper</a></li>
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div id="document_list">
+
+
+		</div>
